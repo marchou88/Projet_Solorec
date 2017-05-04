@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_fin_dim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.march.solorec1.activity_fin_dim">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:theme="?attr/actionBarTheme"
+        android:id="@+id/toolbar"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/logo_menu"
+        android:id="@+id/button_retourfindim"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true" />
+ <!--   <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_retourfindim"
+        android:text="Menu"
+        android:background="@android:color/holo_blue_bright"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:elevation="0dp"
+        android:textColor="@android:color/background_light"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="25dp" /> -->
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/logotranspa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView5" />
+
+    <TextView
+        android:text="Dimensionnement d'une installation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_light"
+        android:layout_alignTop="@+id/button_retourdebdec"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_precfindim"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/buttonprecedent" />
+
+            <TextView
+                android:text="Soupapes de sécurité"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:id="@+id/textView_soup" />
+
+            <TextView
+                android:text="Contrôler la conformité des soupapaes de sécurité (voir plaque signalétique chaudière)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_soup"
+                android:layout_marginTop="19dp"
+                android:id="@+id/textView_ctrsoup"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:text="Pression Max (bar) :           P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ctrsoup"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="22dp"
+                android:id="@+id/textView_presm" />
+
+            <TextView
+                android:text="Pression soupape (bar) :   P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_presm"
+                android:layout_alignStart="@+id/textView_presm"
+                android:layout_marginTop="21dp"
+                android:id="@+id/textView_pressou" />
+
+            <TextView
+                android:text="Dimensionnement : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_pressou"
+                android:layout_alignStart="@+id/textView_pressou"
+                android:layout_marginTop="33dp"
+                android:id="@+id/textView_dimsou" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignTop="@+id/textView_dimsou"
+                android:layout_toEndOf="@+id/textView_dimsou"
+                android:layout_marginStart="23dp">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bsou" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_msou" />
+            </RadioGroup>
+
+            <TextView
+                android:text="Pompes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_dimsou"
+                android:layout_marginTop="30dp"
+                android:id="@+id/textView_pom"
+                android:layout_toEndOf="@+id/textView_dimsou" />
+
+            <TextView
+                android:text="Vérifier le point de courbe de chaque pompe (voir Abbaques)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_pom"
+                android:layout_marginTop="19dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/textView_aba" />
+
+
+            <TextView
+                android:text="Circulateur n°1 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_aba"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView_c1" />
+
+            <TextView
+                android:text="Circulateur n°2 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_c1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="12dp"
+                android:id="@+id/textView_c2" />
+            <TextView
+                android:text="Circulateur n°3 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_c2"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="12dp"
+                android:id="@+id/textView_c3" />
+            <TextView
+                android:text="Circulateur n°4 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_c3"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="12dp"
+                android:id="@+id/textView_c4" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="8"
+                android:id="@+id/editText_bar1"
+                android:layout_alignBaseline="@+id/textView_presm"
+                android:layout_alignBottom="@+id/textView_presm"
+                android:layout_toEndOf="@+id/textView_presm" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="8"
+                android:id="@+id/editText_bar2"
+                android:layout_alignBaseline="@+id/textView_pressou"
+                android:layout_alignBottom="@+id/textView_pressou"
+                android:layout_toEndOf="@+id/textView_pressou" />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/textView_aba"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="150dp"
+                android:id="@+id/radioGroup_bci1">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bci1" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mci1"
+                    />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/radioGroup_bci1"
+                android:layout_marginStart="150dp"
+                android:id="@+id/radioGroup_bci2">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bci2" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mci2" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/radioGroup_bci2"
+                android:layout_marginStart="150dp"
+                android:id="@+id/radioGroup_bci3">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bci3" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mci3" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/radioGroup_bci3"
+                android:layout_marginStart="150dp"
+                android:id="@+id/radioGroup_bci4">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bci4" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mci4"
+                    />
+            </RadioGroup>
+
+            <TextView
+                android:text="Bouteille de mélange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioGroup_bci4"
+                android:layout_marginTop="50dp"
+                android:id="@+id/textView_bout"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:text="Règle des (n+2 x d) : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_bout"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView_rn2d"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:text="(n+2 x d) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_rn2d"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView_n2d"
+                android:layout_marginStart="10dp"/>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:id="@+id/editText_n2d"
+                android:layout_alignBaseline="@+id/textView_n2d"
+                android:layout_alignBottom="@+id/textView_n2d"
+                android:layout_toEndOf="@+id/textView_n2d" />
+
+            <TextView
+                android:text="D = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_n2d"
+                android:layout_alignBottom="@+id/editText_n2d"
+                android:layout_toEndOf="@+id/editText_n2d"
+                android:id="@+id/textView_d"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:id="@+id/editText_d"
+                android:layout_alignBaseline="@+id/textView_d"
+                android:layout_alignBottom="@+id/textView_d"
+                android:layout_toEndOf="@+id/textView_d" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView_n2d"
+                android:id="@+id/radioGroup_bout">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bbout" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mbout"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Hauteur de piquage : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_bout"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView_hautp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:text="3d = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_hautp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView_3d"
+                android:layout_marginStart="10dp"/>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:id="@+id/editText_3d"
+                android:layout_alignBaseline="@+id/textView_3d"
+                android:layout_alignBottom="@+id/textView_3d"
+                android:layout_toEndOf="@+id/textView_3d" />
+
+            <TextView
+                android:text="hauteur piquage = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_3d"
+                android:layout_alignBottom="@+id/editText_3d"
+                android:layout_toEndOf="@+id/editText_3d"
+                android:id="@+id/textView_hp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:id="@+id/editText_hp"
+                android:layout_alignBaseline="@+id/textView_hp"
+                android:layout_alignBottom="@+id/textView_hp"
+                android:layout_toEndOf="@+id/textView_hp" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView_3d"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_hdp">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bhdp" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mhdp"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Vase d'expansion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_hdp"
+                android:id="@+id/textView_vased"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"/>
+
+            <TextView
+                android:text="Volume théorique vase d'expansion : V(L) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_vased"
+                android:id="@+id/textView_voltv"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_voltv"
+                android:layout_alignBaseline="@+id/textView_voltv"
+                android:layout_alignBottom="@+id/textView_voltv"
+                android:layout_toEndOf="@+id/textView_voltv" />
+            <TextView
+                android:text="Volume réel vase d'expansion : V(L) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_voltv"
+                android:id="@+id/textView_volrv"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_volrv"
+                android:layout_alignBaseline="@+id/textView_volrv"
+                android:layout_alignBottom="@+id/textView_volrv"
+                android:layout_toEndOf="@+id/textView_volrv" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView_volrv"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_vase">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bvase" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mvase"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Pression de gonflage théorique : P(bar) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_vase"
+                android:id="@+id/textView_prest"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_prest"
+                android:layout_alignBaseline="@+id/textView_prest"
+                android:layout_alignBottom="@+id/textView_prest"
+                android:layout_toEndOf="@+id/textView_prest" />
+            <TextView
+                android:text="Pression de gonflage réele : P(bar) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_prest"
+                android:id="@+id/textView_presr"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_presr"
+                android:layout_alignBaseline="@+id/textView_presr"
+                android:layout_alignBottom="@+id/textView_presr"
+                android:layout_toEndOf="@+id/textView_presr" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_presr"
+                android:id="@+id/radioGroup_pvase">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bpvase" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mpvase"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Eau Chaude Sanitaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_pvase"
+                android:id="@+id/textView_ECS"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:text="Le volume et la puissance sont-ils cohérents avec le nombre de logements (Voir abaques) "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ECS"
+                android:id="@+id/textView_nblog"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:textAlignment="textStart" />
+            <TextView
+                android:text="Volume théorique : V(L) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_nblog"
+                android:id="@+id/textView_vth"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_vth"
+                android:layout_alignBaseline="@+id/textView_vth"
+                android:layout_alignBottom="@+id/textView_vth"
+                android:layout_toEndOf="@+id/textView_vth" />
+            <TextView
+                android:text="Volume réel : V(L) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_vth"
+                android:id="@+id/textView_vr"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_vr"
+                android:layout_alignBaseline="@+id/textView_vr"
+                android:layout_alignBottom="@+id/textView_vr"
+                android:layout_toEndOf="@+id/textView_vr" />
+
+            <TextView
+                android:text="Pression théorique : P(bar) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_vth"
+                android:layout_alignBottom="@+id/editText_vth"
+                android:layout_toEndOf="@+id/editText_vth"
+                android:id="@+id/textView_pth"/>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_pth"
+                android:layout_alignBaseline="@+id/textView_pth"
+                android:layout_alignBottom="@+id/textView_pth"
+                android:layout_toEndOf="@+id/textView_pth" />
+            <TextView
+                android:text="Pression réele : P(bar) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editText_vr"
+                android:layout_alignBottom="@+id/editText_vr"
+                android:layout_toEndOf="@+id/editText_vr"
+                android:id="@+id/textView_pr"/>
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_pr"
+                android:layout_alignBaseline="@+id/textView_pr"
+                android:layout_alignBottom="@+id/textView_pr"
+                android:layout_toEndOf="@+id/textView_pr" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_vr"
+                android:id="@+id/radioGroup_ecs">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_becs" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mecs"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Le débit de puissance est-il adapté ? (Voir Tableau) "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ecs"
+                android:id="@+id/textView_debp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:text="Débit théorique : D(m3/s) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_debp"
+                android:id="@+id/textView_dth"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_dth"
+                android:layout_alignBaseline="@+id/textView_dth"
+                android:layout_alignBottom="@+id/textView_dth"
+                android:layout_toEndOf="@+id/textView_dth" />
+            <TextView
+                android:text="Débit réel : D(m3/s) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_dth"
+                android:id="@+id/textView_dr"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_dr"
+                android:layout_alignBaseline="@+id/textView_dr"
+                android:layout_alignBottom="@+id/textView_dr"
+                android:layout_toEndOf="@+id/textView_dr" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_dr"
+                android:id="@+id/radioGroup_deb">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bdeb" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mdeb"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Sondes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/radioGroup_deb"
+                android:id="@+id/textView_son" />
+
+            <TextView
+                android:text="Vérifier que la ou les sondes sont idéalement placées "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_son"
+                android:id="@+id/textView_vson"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_vson"
+                android:id="@+id/radioGroup_son">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bson" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mson"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Ventilation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/radioGroup_son"
+                android:id="@+id/textView_ven" />
+            <TextView
+                android:text="Ventilation basse : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ven"
+                android:id="@+id/textView_venb"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:text="Section théorique : S(m²) ≥ "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_venb"
+                android:id="@+id/textView_sectb"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_sectb"
+                android:layout_alignBaseline="@+id/textView_sectb"
+                android:layout_alignBottom="@+id/textView_sectb"
+                android:layout_toEndOf="@+id/textView_sectb" />
+            <TextView
+                android:text="Section réele : S(m²) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_sectb"
+                android:id="@+id/textView_secrb"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_secrb"
+                android:layout_alignBaseline="@+id/textView_secrb"
+                android:layout_alignBottom="@+id/textView_secrb"
+                android:layout_toEndOf="@+id/textView_secrb" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_secrb"
+                android:id="@+id/radioGroup_vb">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bvb" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mvb"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Ventilation haute : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_vb"
+                android:id="@+id/textView_venh"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:text="Section théorique : S(m²) ≥ "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_venh"
+                android:id="@+id/textView_secth"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/editText_secth"
+                android:layout_alignBaseline="@+id/textView_secth"
+                android:layout_alignBottom="@+id/textView_secth"
+                android:layout_toEndOf="@+id/textView_secth" />
+            <TextView
+                android:text="Section réele : S(m²) = "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_secth"
+                android:id="@+id/textView_secrh"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:id="@+id/editText_sr"
+                android:layout_alignBaseline="@+id/textView_secrh"
+                android:layout_alignBottom="@+id/textView_secrh"
+                android:layout_toEndOf="@+id/textView_secrh" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_secrh"
+                android:id="@+id/radioGroup_vh">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bvh" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mvh"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+            <TextView
+                android:text="Calorifugeage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/radioGroup_vh"
+                android:id="@+id/textView_calo"/>
+            <TextView
+                android:text="Vérifier la bonne isolation de tous les organes et conduites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_calo"
+                android:layout_marginTop="19dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView_iso"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView_iso"
+                android:id="@+id/radioGroup_calo">
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bcalo" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mcalo"
+                    android:layout_marginStart="30dp"/>
+            </RadioGroup>
+
+            <TextView
+                android:text="Observations générales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_below= "@+id/radioGroup_calo"
+                android:id="@+id/textView_obsdim"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView_obsdim"
+                android:id="@+id/editText_obsdim"/>
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_valdim"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/editText_obsdim"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/button_valider" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

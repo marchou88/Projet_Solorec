@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:theme="?attr/actionBarTheme"
+        android:id="@+id/toolbar"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/logo_menu"
+        android:id="@+id/button_retourchdim"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true" />
+  <!--  <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_retourchdim"
+        android:text="Menu"
+        android:background="@android:color/holo_blue_bright"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:elevation="0dp"
+        android:textColor="@android:color/background_light"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="25dp" /> -->
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/logotranspa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView5" />
+
+    <TextView
+        android:text="Dimensionnement d'une installation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_light"
+        android:layout_alignTop="@+id/button_retourdebdec"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp" />
+
+
+
+  <!--  <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_precchdim"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/buttonprecedent"
+        android:layout_below="@+id/toolbar"/>
+
+    <Button
+        android:text="Suivant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/button_suivchdim" />
+    <Button
+        android:text="Précédent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/button_precchdim" /> -->
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_suivchdim"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/buttonsuivant" />
+            <TextView
+                android:text="Chaudière 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:id="@+id/textView_ch1dim" />
+
+            <TextView
+                android:text="Puissance théorique (kW) :    P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ch1dim"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="22dp"
+                android:id="@+id/textView_puisct1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="8"
+                android:id="@+id/editText_puisct1"
+                android:layout_alignBaseline="@+id/textView_puisct1"
+                android:layout_alignBottom="@+id/textView_puisct1"
+                android:layout_toEndOf="@+id/textView_puisct1"
+                android:layout_marginStart="10dp" />
+            <TextView
+                android:text="Puissance réele (kW) :            P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puisct1"
+                android:layout_alignStart="@+id/textView_puisct1"
+                android:layout_marginTop="21dp"
+                android:id="@+id/textView_puiscr1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:ems="10"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:id="@+id/editText_puiscr1"
+                android:layout_below="@+id/editText_puisct1"
+                android:layout_toEndOf="@+id/textView_puiscr1" />
+            <TextView
+                android:text="Dimensionnement : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puiscr1"
+                android:layout_alignStart="@+id/textView_puiscr1"
+                android:layout_marginTop="33dp"
+                android:id="@+id/textView_dimc1" />
+
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignTop="@+id/textView_dimc1"
+                android:layout_toEndOf="@+id/textView_dimc1"
+                android:layout_marginStart="23dp">
+
+            <RadioButton
+                android:text="Bon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_bc1"
+                android:checked="false" />
+            <RadioButton
+                android:text="Mauvais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton_mc1" />
+        </RadioGroup>
+
+            <TextView
+                android:text="Chaudière 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="250dp"
+                android:id="@+id/textView_ch2dim" />
+
+            <TextView
+                android:text="Puissance théorique (kW) :    P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ch2dim"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="22dp"
+                android:id="@+id/textView_puisct2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="8"
+                android:id="@+id/editText_puisct2"
+                android:layout_alignBaseline="@+id/textView_puisct2"
+                android:layout_alignBottom="@+id/textView_puisct2"
+                android:layout_toEndOf="@+id/textView_puisct2"
+                android:layout_marginStart="10dp" />
+            <TextView
+                android:text="Puissance réele (kW) :            P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puisct2"
+                android:layout_alignStart="@+id/textView_puisct2"
+                android:layout_marginTop="21dp"
+                android:id="@+id/textView_puiscr2" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_puiscr2"
+                android:layout_below="@+id/editText_puisct2"
+                android:layout_toEndOf="@+id/textView_puiscr2" />
+            <TextView
+                android:text="Dimensionnement : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puiscr2"
+                android:layout_alignStart="@+id/textView_puiscr2"
+                android:layout_marginTop="33dp"
+                android:id="@+id/textView_dimc2" />
+
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignTop="@+id/textView_dimc2"
+                android:layout_toEndOf="@+id/textView_dimc2"
+                android:layout_marginStart="23dp">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bc2"
+                    android:checked="false" />
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mc2" />
+            </RadioGroup>
+
+
+            <TextView
+                android:text="Chaudière 3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="430dp"
+                android:id="@+id/textView_ch3dim" />
+
+            <TextView
+                android:text="Puissance théorique (kW) :    P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ch3dim"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="22dp"
+                android:id="@+id/textView_puisct3" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="8"
+                android:id="@+id/editText_puisct3"
+                android:layout_alignBaseline="@+id/textView_puisct3"
+                android:layout_alignBottom="@+id/textView_puisct3"
+                android:layout_toEndOf="@+id/textView_puisct3"
+                android:layout_marginStart="10dp" />
+            <TextView
+                android:text="Puissance réele (kW) :            P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puisct3"
+                android:layout_alignStart="@+id/textView_puisct3"
+                android:layout_marginTop="21dp"
+                android:id="@+id/textView_puiscr3" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_puiscr3"
+                android:layout_below="@+id/editText_puisct3"
+                android:layout_toEndOf="@+id/textView_puiscr3" />
+            <TextView
+                android:text="Dimensionnement : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puiscr3"
+                android:layout_alignStart="@+id/textView_puiscr3"
+                android:layout_marginTop="33dp"
+                android:id="@+id/textView_dimc3" />
+
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignTop="@+id/textView_dimc3"
+                android:layout_toEndOf="@+id/textView_dimc3"
+                android:layout_marginStart="23dp">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bc3"
+                    android:checked="false" />
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mc3" />
+            </RadioGroup>
+
+
+            <TextView
+                android:text="Chaudière 4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="610dp"
+                android:id="@+id/textView_ch4dim" />
+
+            <TextView
+                android:text="Puissance théorique (kW) :    P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ch4dim"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="22dp"
+                android:id="@+id/textView_puisct4" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="8"
+                android:id="@+id/editText_puisct4"
+                android:layout_alignBaseline="@+id/textView_puisct4"
+                android:layout_alignBottom="@+id/textView_puisct4"
+                android:layout_toEndOf="@+id/textView_puisct4"
+                android:layout_marginStart="10dp" />
+            <TextView
+                android:text="Puissance réele (kW) :            P="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puisct4"
+                android:layout_alignStart="@+id/textView_puisct4"
+                android:layout_marginTop="21dp"
+                android:id="@+id/textView_puiscr4" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText_puiscr4"
+                android:layout_below="@+id/editText_puisct4"
+                android:layout_toEndOf="@+id/textView_puiscr4" />
+            <TextView
+                android:text="Dimensionnement : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_puiscr4"
+                android:layout_alignStart="@+id/textView_puiscr4"
+                android:layout_marginTop="33dp"
+                android:id="@+id/textView_dimc4" />
+
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignTop="@+id/textView_dimc4"
+                android:layout_toEndOf="@+id/textView_dimc4"
+                android:layout_marginStart="23dp">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_bc4"
+                    android:checked="false" />
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mc4" />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

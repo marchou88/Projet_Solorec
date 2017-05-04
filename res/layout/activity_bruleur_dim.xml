@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_bruleur_dim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.march.solorec1.activity_bruleur_dim">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:theme="?attr/actionBarTheme"
+        android:id="@+id/toolbar"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/logo_menu"
+        android:id="@+id/button_retourbrudim"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true" />
+    <!--   <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/button_retourbrudim"
+           android:text="Menu"
+           android:background="@android:color/holo_blue_bright"
+           style="@style/Widget.AppCompat.Button.Borderless"
+           android:elevation="0dp"
+           android:textColor="@android:color/background_light"
+           android:layout_alignBottom="@+id/toolbar"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="10dp"
+           android:layout_marginStart="7dp"
+           android:layout_marginRight="3dp"/> -->
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/logotranspa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView5" />
+
+    <TextView
+        android:text="Dimensionnement d'une installation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="16sp"
+        android:textColor="@android:color/background_light"
+        android:layout_alignTop="@+id/button_retourdebdec"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+           <!-- <Button
+                android:text="Suivant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/button_suivbdim" />
+                 <Button
+                  android:text="Précédent"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentTop="true"
+                  android:layout_alignParentStart="true"
+                  android:id="@+id/button_precbdim" />  -->
+  <ImageButton
+      android:layout_width="150dp"
+      android:layout_height="50dp"
+      android:id="@+id/button_precbdim"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true"
+      android:background="@drawable/buttonprecedent" />
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:id="@+id/button_suivbdim"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/buttonsuivant" />
+              <TextView
+                  android:text="Bruleur 1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="20dp"
+                  android:layout_below="@+id/button_suivbdim"
+                  android:id="@+id/textView_bru1"
+                  android:layout_centerHorizontal="true" />
+              <TextView
+                  android:text="Puissance théorique (kW) :    P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_bru1"
+                  android:layout_alignParentStart="true"
+                  android:layout_marginStart="35dp"
+                  android:layout_marginTop="22dp"
+                  android:id="@+id/textView_puisbt1" />
+
+              <TextView
+                  android:text="Puissance nécessaire (kW) :  P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbt1"
+                  android:layout_alignStart="@+id/textView_puisbt1"
+                  android:layout_marginTop="21dp"
+                  android:id="@+id/textView_puisbn1" />
+
+              <TextView
+                  android:text="Dimensionnement : "
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbn1"
+                  android:layout_alignStart="@+id/textView_puisbn1"
+                  android:layout_marginTop="20dp"
+                  android:id="@+id/textView_dimb1" />
+
+              <RadioGroup
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignTop="@+id/textView_dimb1"
+                  android:layout_toEndOf="@+id/textView_dimb1"
+                  android:layout_marginStart="23dp">
+                  <RadioButton
+                      android:text="Bon"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_bb1" />
+
+                  <RadioButton
+                      android:text="Mauvais"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_mb1" />
+              </RadioGroup>
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbt1"
+                  android:layout_alignBaseline="@+id/textView_puisbt1"
+                  android:layout_alignBottom="@+id/textView_puisbt1"
+                  android:layout_toEndOf="@+id/textView_dimb1"
+                  android:layout_marginStart="70dp" />
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbn1"
+                  android:layout_alignBaseline="@+id/textView_puisbn1"
+                  android:layout_alignBottom="@+id/textView_puisbn1"
+                  android:layout_toEndOf="@+id/textView_dimb1"
+                  android:layout_marginStart="70dp" />
+
+
+              <TextView
+                  android:text="Bruleur 2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="220dp"
+                  android:id="@+id/textView_bru2"
+                  android:layout_centerHorizontal="true" />
+              <TextView
+                  android:text="Puissance théorique (kW) :    P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_bru2"
+                  android:layout_alignParentStart="true"
+                  android:layout_marginStart="35dp"
+                  android:layout_marginTop="22dp"
+                  android:id="@+id/textView_puisbt2" />
+
+              <TextView
+                  android:text="Puissance nécessaire (kW) :  P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbt2"
+                  android:layout_alignStart="@+id/textView_puisbt2"
+                  android:layout_marginTop="21dp"
+                  android:id="@+id/textView_puisbn2" />
+
+              <TextView
+                  android:text="Dimensionnement : "
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbn2"
+                  android:layout_alignStart="@+id/textView_puisbn2"
+                  android:layout_marginTop="20dp"
+                  android:id="@+id/textView_dimb2" />
+
+              <RadioGroup
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignTop="@+id/textView_dimb2"
+                  android:layout_toEndOf="@+id/textView_dimb2"
+                  android:layout_marginStart="23dp">
+                  <RadioButton
+                      android:text="Bon"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_bb2" />
+
+                  <RadioButton
+                      android:text="Mauvais"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_mb2" />
+              </RadioGroup>
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbt2"
+                  android:layout_alignBaseline="@+id/textView_puisbt2"
+                  android:layout_alignBottom="@+id/textView_puisbt2"
+                  android:layout_toEndOf="@+id/textView_dimb2"
+                  android:layout_marginStart="70dp" />
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbn2"
+                  android:layout_alignBaseline="@+id/textView_puisbn2"
+                  android:layout_alignBottom="@+id/textView_puisbn2"
+                  android:layout_toEndOf="@+id/textView_dimb2"
+                  android:layout_marginStart="70dp" />
+
+              <TextView
+                  android:text="Bruleur 3"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="380dp"
+                  android:id="@+id/textView_bru3"
+                  android:layout_centerHorizontal="true" />
+              <TextView
+                  android:text="Puissance théorique (kW) :    P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_bru3"
+                  android:layout_alignParentStart="true"
+                  android:layout_marginStart="35dp"
+                  android:layout_marginTop="22dp"
+                  android:id="@+id/textView_puisbt3" />
+
+              <TextView
+                  android:text="Puissance nécessaire (kW) :  P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbt3"
+                  android:layout_alignStart="@+id/textView_puisbt3"
+                  android:layout_marginTop="21dp"
+                  android:id="@+id/textView_puisbn3" />
+
+              <TextView
+                  android:text="Dimensionnement : "
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbn3"
+                  android:layout_alignStart="@+id/textView_puisbn3"
+                  android:layout_marginTop="20dp"
+                  android:id="@+id/textView_dimb3" />
+
+              <RadioGroup
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignTop="@+id/textView_dimb3"
+                  android:layout_toEndOf="@+id/textView_dimb3"
+                  android:layout_marginStart="23dp">
+                  <RadioButton
+                      android:text="Bon"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_bb3" />
+
+                  <RadioButton
+                      android:text="Mauvais"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_mb3" />
+              </RadioGroup>
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbt3"
+                  android:layout_alignBaseline="@+id/textView_puisbt3"
+                  android:layout_alignBottom="@+id/textView_puisbt3"
+                  android:layout_toEndOf="@+id/textView_dimb3"
+                  android:layout_marginStart="70dp" />
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbn3"
+                  android:layout_alignBaseline="@+id/textView_puisbn3"
+                  android:layout_alignBottom="@+id/textView_puisbn3"
+                  android:layout_toEndOf="@+id/textView_dimb3"
+                  android:layout_marginStart="70dp" />
+
+
+              <TextView
+                  android:text="Bruleur 4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="550dp"
+                  android:id="@+id/textView_bru4"
+                  android:layout_centerHorizontal="true" />
+              <TextView
+                  android:text="Puissance théorique (kW) :    P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_bru4"
+                  android:layout_alignParentStart="true"
+                  android:layout_marginStart="35dp"
+                  android:layout_marginTop="22dp"
+                  android:id="@+id/textView_puisbt4" />
+
+              <TextView
+                  android:text="Puissance nécessaire (kW) :  P="
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbt4"
+                  android:layout_alignStart="@+id/textView_puisbt4"
+                  android:layout_marginTop="21dp"
+                  android:id="@+id/textView_puisbn4" />
+
+              <TextView
+                  android:text="Dimensionnement : "
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/textView_puisbn4"
+                  android:layout_alignStart="@+id/textView_puisbn4"
+                  android:layout_marginTop="20dp"
+                  android:id="@+id/textView_dimb4" />
+
+              <RadioGroup
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignTop="@+id/textView_dimb4"
+                  android:layout_toEndOf="@+id/textView_dimb4"
+                  android:layout_marginStart="23dp">
+                  <RadioButton
+                      android:text="Bon"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_bb4" />
+
+                  <RadioButton
+                      android:text="Mauvais"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/radioButton_mb4" />
+              </RadioGroup>
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbt4"
+                  android:layout_alignBaseline="@+id/textView_puisbt4"
+                  android:layout_alignBottom="@+id/textView_puisbt4"
+                  android:layout_toEndOf="@+id/textView_dimb4"
+                  android:layout_marginStart="70dp" />
+
+              <EditText
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:inputType="textPersonName"
+                  android:ems="8"
+                  android:id="@+id/editText_puisbn4"
+                  android:layout_alignBaseline="@+id/textView_puisbn4"
+                  android:layout_alignBottom="@+id/textView_puisbn4"
+                  android:layout_toEndOf="@+id/textView_dimb4"
+                  android:layout_marginStart="70dp" />
+
+          </RelativeLayout>
+      </ScrollView>
+
+
+
+</RelativeLayout>

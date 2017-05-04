@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.march.solorec1">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logoapplisiza"
+        android:label="Solorec"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateAlwaysHidden">
+        <activity
+            android:name=".activity_accueil"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_menu"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_fin_dim"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_chaudiere_dim"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_bruleur_dim"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_recherche"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_chaudiere_dia"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_circuit_dia"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_fin_dia"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_connexion"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity_debut_dec"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity_chaudiere_dec"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity_fin_dec"
+            android:windowSoftInputMode="stateHidden"></activity>
+    </application>
+
+
+
+</manifest>
