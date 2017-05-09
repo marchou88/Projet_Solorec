@@ -1,0 +1,8 @@
+.idea/
+gradle/
+gen/
+*.gradle
+*.iml
+*.properties
+gradlew
+*.bat
