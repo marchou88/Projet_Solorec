@@ -107,6 +107,9 @@
                   android:layout_below="@+id/button_suivbdim"
                   android:id="@+id/textView_bru1"
                   android:layout_centerHorizontal="true" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></RelativeLayout>
               <TextView
                   android:text="Puissance théorique (kW) :    P="
                   android:layout_width="wrap_content"
@@ -116,6 +119,7 @@
                   android:layout_marginStart="35dp"
                   android:layout_marginTop="22dp"
                   android:id="@+id/textView_puisbt1" />
+
 
               <TextView
                   android:text="Puissance nécessaire (kW) :  P="
@@ -158,7 +162,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbt1"
                   android:layout_alignBaseline="@+id/textView_puisbt1"
@@ -169,7 +173,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbn1"
                   android:layout_alignBaseline="@+id/textView_puisbn1"
@@ -236,7 +240,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbt2"
                   android:layout_alignBaseline="@+id/textView_puisbt2"
@@ -247,7 +251,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbn2"
                   android:layout_alignBaseline="@+id/textView_puisbn2"
@@ -313,7 +317,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbt3"
                   android:layout_alignBaseline="@+id/textView_puisbt3"
@@ -324,7 +328,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbn3"
                   android:layout_alignBaseline="@+id/textView_puisbn3"
@@ -391,7 +395,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbt4"
                   android:layout_alignBaseline="@+id/textView_puisbt4"
@@ -402,7 +406,7 @@
               <EditText
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:inputType="textPersonName"
+                  android:inputType="number"
                   android:ems="8"
                   android:id="@+id/editText_puisbn4"
                   android:layout_alignBaseline="@+id/textView_puisbn4"

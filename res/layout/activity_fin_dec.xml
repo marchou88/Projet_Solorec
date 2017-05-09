@@ -90,7 +90,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_nbcir"
                 android:layout_centerHorizontal="true"
@@ -109,18 +109,35 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_presmax"
                 android:layout_alignStart="@+id/textView_nbcir"
                 android:layout_marginTop="20dp"
                 android:id="@+id/editText_presmax" />
+            <TextView
+                android:text="Nombre de sous-stations "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editText_presmax"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView_nbssstat" />
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:layout_below="@+id/textView_nbssstat"
+                android:layout_alignStart="@+id/textView_nbcir"
+                android:layout_marginTop="20dp"
+                android:id="@+id/editText_nbssstat" />
             <TextView
                 android:text="Type ECS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText_presmax"
+                android:layout_below="@+id/editText_nbssstat"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView_ecs" />
@@ -207,17 +224,25 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_voldec"
                 android:layout_alignStart="@+id/textView_nbcir"
                 android:layout_marginTop="20dp"
                 android:id="@+id/editText_voldec" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="30dp"
+                android:id="@+id/checkbox_mel"
+                android:layout_below="@+id/editText_voldec"
+                android:layout_centerHorizontal="true"
+                android:text="Présence d'une bouteille de mélange" />
             <TextView
                 android:text="Bouteille de mélange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText_voldec"
+                android:layout_below="@+id/checkbox_mel"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView_bout"/>
@@ -233,7 +258,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_diam"
                 android:layout_alignStart="@+id/textView_nbcir"
@@ -250,7 +275,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_haut"
                 android:layout_alignStart="@+id/textView_nbcir"
@@ -302,7 +327,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_hmtci1"
                 android:layout_alignStart="@+id/textView_nbcir"
@@ -354,7 +379,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_hmtci2"
                 android:layout_alignStart="@+id/textView_nbcir"
@@ -406,7 +431,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_hmtci3"
                 android:layout_alignStart="@+id/textView_nbcir"
@@ -458,7 +483,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="none"
+                android:inputType="number"
                 android:ems="10"
                 android:layout_below="@+id/textView_hmtci4"
                 android:layout_alignStart="@+id/textView_nbcir"
@@ -500,14 +525,21 @@
                     />
             </RadioGroup>
 
-
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/checkbox_red"
+                android:layout_below="@+id/radioGroup_boue"
+                android:layout_centerHorizontal="true"
+                android:text="Présence d'un réduit" />
             <TextView
                 android:text="Horaires et abaissement réduit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:layout_below="@+id/radioGroup_boue"
+                android:layout_below="@+id/checkbox_red"
                 android:id="@+id/textView_hor" />
 
             <TextView
@@ -518,9 +550,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="212dp"
             android:id="@+id/textView_debr" />
-
-            //////////////////////////////////////////
-
 
             <TextView
                 android:text="h"

@@ -41,7 +41,7 @@ public class activity_bruleur_dim extends AppCompatActivity {
             }
         });
         }
-
+   // ((textView) tv.....).setVisibility(View.INVISIBLE);
 
     private void goToDimens() {
         Intent intent1 = new Intent();

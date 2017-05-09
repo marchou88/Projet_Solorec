@@ -91,7 +91,43 @@
                 android:id="@+id/button_suivdebdec"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/buttonsuivant" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView_numcontrat"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_id">
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText_id1" />
 
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText_id2" />
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editText_id3" />
+            </RadioGroup>
+
+            <TextView
+                android:text="- Numéro de contrat -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:id="@+id/textView_numcontrat" />
             <EditText
                 android:ems="10"
                 android:layout_marginTop="18dp"
@@ -162,12 +198,20 @@
                 android:layout_marginTop="21dp"
                 android:id="@+id/spinner_client"
                 android:layout_below="@+id/textView_client" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/spinner_client"
+                android:text="- Type de prestation -"
+                android:layout_marginTop="10dp"
+                android:id="@+id/textView_prestation"/>
 <RadioGroup
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:orientation="horizontal"
-    android:layout_below="@+id/spinner_client"
+    android:layout_below="@+id/textView_prestation"
     android:id="@+id/radioGroup_checkbox">
 
             <CheckBox
@@ -229,7 +273,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_nominstal"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp" />
+               android:layout_below="@+id/radioGroup_id"
+                android:layout_marginTop="20dp"/>
 
             <TextView
                 android:text="- Marché -"
@@ -290,7 +335,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
+                android:inputType="text|date"
                 android:ems="7"
                 android:id="@+id/editText_datfin"
                 android:textSize="12sp"
@@ -312,7 +357,6 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
                 android:ems="7"
                 android:id="@+id/editText_datdeb"
                 android:textSize="12sp"
@@ -320,7 +364,8 @@
                 android:layout_alignBottom="@+id/textView_datdeb"
                 android:layout_toEndOf="@id/textView_datdeb"
                 android:hint="JJ/MM/AAAA"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:inputType="text|date" />
 
             <TextView
                 android:text="- Puissance installée -"

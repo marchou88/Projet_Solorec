@@ -28,21 +28,21 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:layout_alignParentEnd="true" />
-  <!--  <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_retourcirdia"
-        android:text="Menu"
-        android:background="@android:color/holo_green_light"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:elevation="0dp"
-        android:textColor="@android:color/background_light"
-        android:layout_marginRight="20dp"
-        android:layout_alignBottom="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="25dp" /> -->
+    <!--  <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/button_retourcirdia"
+          android:text="Menu"
+          android:background="@android:color/holo_green_light"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:elevation="0dp"
+          android:textColor="@android:color/background_light"
+          android:layout_marginRight="20dp"
+          android:layout_alignBottom="@+id/toolbar"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="25dp" /> -->
 
 
     <ImageView
@@ -76,21 +76,21 @@
             android:layout_height="fill_parent"
             android:orientation="vertical">
 
-     <!--       <Button
-                android:text="Précédent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/button_preccirdia" />
+            <!--       <Button
+                       android:text="Précédent"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentStart="true"
+                       android:id="@+id/button_preccirdia" />
 
-            <Button
-                android:text="Suivant"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/button_suivcirdia" /> -->
+                   <Button
+                       android:text="Suivant"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_alignParentEnd="true"
+                       android:id="@+id/button_suivcirdia" /> -->
             <ImageButton
                 android:layout_width="150dp"
                 android:layout_height="50dp"
@@ -105,17 +105,44 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/buttonsuivant" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_suivcirdia"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/radioGroup_ctrtempecir1">
+                <TextView
+                    android:text="T°extérieure =  "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_tempextcir1" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editText_tempextcir1"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+
+
             <TextView
                 android:text="Circuit 1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView_cir1dia"
-                android:layout_below="@+id/button_suivcirdia"
+                android:layout_below="@+id/radioGroup_ctrtempecir1"
                 android:layout_marginTop="20dp"/>
 
             <TextView
-                android:text="Contrôle des températures de départ, retour et extérieure"
+                android:text="Cohérence des températures de départ et de retour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_cir1dia"
@@ -147,60 +174,67 @@
                     android:textSize="14sp" />
             </RadioGroup>
 
-<RadioGroup
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/radioGroup_tempdcir1"
-    android:layout_marginTop="20dp"
-    android:orientation="horizontal"
-    android:layout_centerHorizontal="true"
-    android:id="@+id/radioGroup_ctrtemprcir1">
-
-            <TextView
-                android:text="T°retour ="
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_temprcir1" />
-
-            <EditText
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/editText_temprcir1"
-                android:layout_width="140dp"
-                android:textSize="14sp" />
-</RadioGroup>
-
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtemprcir1"
+                android:layout_below="@+id/radioGroup_tempdcir1"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_ctrtempecir1">
-             <TextView
-                 android:text="T°extérieure =  "
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/textView_tempextcir1" />
+                android:id="@+id/radioGroup_ctrtemprcir1">
 
-             <EditText
-                 android:layout_height="wrap_content"
-                 android:layout_width="wrap_content"
-                 android:inputType="numberDecimal"
-                 android:ems="10"
-                 android:id="@+id/editText_tempextcir1"
-                 android:textSize="14sp" />
+                <TextView
+                    android:text="T°retour ="
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_temprcir1" />
+
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editText_temprcir1"
+                    android:layout_width="140dp"
+                    android:textSize="14sp" />
             </RadioGroup>
-             <TextView
-                 android:text="Contrôle de la pression d'eau dans le circuit"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_below="@+id/radioGroup_ctrtempecir1"
-                 android:layout_centerHorizontal="true"
-                 android:layout_marginTop="20dp"
-                 android:id="@+id/textView_ctrprecir1" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrtemprcir1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_tdrcir1">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_tdrbcir1" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_tdrmcir1"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:text="Contrôle de la pression d'eau dans le circuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_tdrcir1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView_ctrprecir1" />
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -209,90 +243,117 @@
                 android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/radioGroup_ctrprecir1">
-             <TextView
-                 android:text="P circuit (Bar) ="
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/textView_precir1" />
-             <EditText
-                 android:layout_height="wrap_content"
-                 android:inputType="numberDecimal"
-                 android:ems="10"
-                 android:id="@+id/editText_ctrprecir1"
-                 android:layout_width="140dp"
-                 android:textSize="14sp" />
-</RadioGroup>
+                <TextView
+                    android:text="P circuit (Bar) ="
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_precir1" />
+                <EditText
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/editText_ctrprecir1"
+                    android:layout_width="140dp"
+                    android:textSize="14sp" />
+            </RadioGroup>
 
-             <TextView
-                 android:text="Contrôle visuel et auditif des circulateurs"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/textView_ctrviscir1"
-                 android:layout_below="@+id/radioGroup_ctrprecir1"
-                 android:layout_marginTop="20dp"
-                 android:layout_centerHorizontal="true" />
-             <RadioGroup
-                 android:layout_width="wrap_content"
-                 android:layout_centerHorizontal="true"
-                 android:layout_height="wrap_content"
-                 android:layout_below="@+id/textView_ctrviscir1"
-                 android:orientation="horizontal"
-                 android:layout_marginTop="10dp"
-                 android:id="@+id/radioGroup_ctrviscir1">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrprecir1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_verifprecir1">
 
 
-                 <RadioButton
-                     android:text="Bon"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_alignStart="@+id/textView_ctrgch1"
-                     android:id="@+id/radioButton_bctrviscir1" />
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_verifbprecir1" />
 
-                 <RadioButton
-                     android:text="Mauvais"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:id="@+id/radioButton_mctrviscir1"
-                     android:layout_marginLeft="50dp"
-                     />
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_verifmprecir1"
+                    android:layout_marginLeft="50dp"
+                    />
 
-             </RadioGroup>
+            </RadioGroup>
 
-             <TextView
-                 android:text="Contrôle des températures pré et post bouteille de mélange"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:id="@+id/textView_ctrboutcir1"
-                 android:layout_below="@+id/radioGroup_ctrviscir1"
-                 android:layout_marginTop="20dp"
-                 android:layout_centerHorizontal="true" />
+            <TextView
+                android:text="Contrôle visuel et auditif des circulateurs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_ctrviscir1"
+                android:layout_below="@+id/radioGroup_verifprecir1"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ctrviscir1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_ctrviscir1">
 
-             <RadioGroup
-                 android:layout_width="wrap_content"
-                 android:layout_centerHorizontal="true"
-                 android:layout_height="wrap_content"
-                 android:layout_below="@+id/textView_ctrboutcir1"
-                 android:orientation="horizontal"
-                 android:layout_marginTop="10dp"
-                 android:id="@+id/radioGroup_ctrboutcir1">
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_bctrviscir1" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mctrviscir1"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Contrôle des températures pré et post bouteille de mélange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_ctrboutcir1"
+                android:layout_below="@+id/radioGroup_ctrviscir1"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_ctrboutcir1"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_ctrboutcir1">
 
 
-                 <RadioButton
-                     android:text="Bon"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:layout_alignStart="@+id/textView_ctrgch1"
-                     android:id="@+id/radioButton_bctrboutcir1" />
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_bctrboutcir1" />
 
-                 <RadioButton
-                     android:text="Mauvais"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content"
-                     android:id="@+id/radioButton_mctrboutcir1"
-                     android:layout_marginLeft="50dp"
-                     />
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mctrboutcir1"
+                    android:layout_marginLeft="50dp"
+                    />
 
-             </RadioGroup>
+            </RadioGroup>
 
             <TextView
                 android:text="Circuit 2"
@@ -304,7 +365,7 @@
                 android:layout_marginTop="50dp"/>
 
             <TextView
-                android:text="Contrôle des températures de départ, retour et extérieure"
+                android:text="Cohérence des températures de départ et de retour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_cir2dia"
@@ -362,34 +423,41 @@
 
             <RadioGroup
                 android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radioGroup_ctrtemprcir2"
-                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_ctrtempecir2">
-                <TextView
-                    android:text="T°extérieure =  "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView_tempextcir2" />
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_tdrcir2">
 
-                <EditText
-                    android:layout_height="wrap_content"
+
+                <RadioButton
+                    android:text="Bon"
                     android:layout_width="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_tempextcir2"
-                    android:textSize="14sp" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_tdrbcir2" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_tdrmcir2"
+                    android:layout_marginLeft="50dp"
+                    />
+
             </RadioGroup>
+
+
             <TextView
                 android:text="Contrôle de la pression d'eau dans le circuit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtempecir2"
+                android:layout_below="@+id/radioGroup_tdrcir2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrprecir2" />
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -412,12 +480,41 @@
                     android:textSize="14sp" />
             </RadioGroup>
 
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrprecir2"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_verifprecir2">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_verifbprecir2" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_verifmprecir2"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
             <TextView
                 android:text="Contrôle visuel et auditif des circulateurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrviscir2"
-                android:layout_below="@+id/radioGroup_ctrprecir2"
+                android:layout_below="@+id/radioGroup_verifprecir2"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
@@ -492,7 +589,7 @@
                 android:layout_marginTop="50dp"/>
 
             <TextView
-                android:text="Contrôle des températures de départ, retour et extérieure"
+                android:text="Cohérence des températures de départ et de retour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_cir3dia"
@@ -548,33 +645,42 @@
                     android:textSize="14sp" />
             </RadioGroup>
 
+
             <RadioGroup
                 android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radioGroup_ctrtemprcir3"
-                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_ctrtempecir3">
-                <TextView
-                    android:text="T°extérieure =  "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView_tempextcir3" />
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_tdrcir3">
 
-                <EditText
-                    android:layout_height="wrap_content"
+
+                <RadioButton
+                    android:text="Bon"
                     android:layout_width="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_tempextcir3"
-                    android:textSize="14sp" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_tdrbcir3" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_tdrmcir3"
+                    android:layout_marginLeft="50dp"
+                    />
+
             </RadioGroup>
+
+
+
+
             <TextView
                 android:text="Contrôle de la pression d'eau dans le circuit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtempecir3"
+                android:layout_below="@+id/radioGroup_tdrcir3"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrprecir3" />
@@ -600,12 +706,43 @@
                     android:textSize="14sp" />
             </RadioGroup>
 
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrprecir3"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_verifprecir3">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_verifbprecir3" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_verifmprecir3"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
+
+
             <TextView
                 android:text="Contrôle visuel et auditif des circulateurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrviscir3"
-                android:layout_below="@+id/radioGroup_ctrprecir3"
+                android:layout_below="@+id/radioGroup_verifprecir3"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
@@ -680,7 +817,7 @@
                 android:layout_marginTop="50dp"/>
 
             <TextView
-                android:text="Contrôle des températures de départ, retour et extérieure"
+                android:text="Cohérence des températures de départ et de retour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_cir4dia"
@@ -738,31 +875,38 @@
 
             <RadioGroup
                 android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radioGroup_ctrtemprcir4"
-                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_ctrtempecir4">
-                <TextView
-                    android:text="T°extérieure =  "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView_tempextcir4" />
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_tdrcir4">
 
-                <EditText
-                    android:layout_height="wrap_content"
+
+                <RadioButton
+                    android:text="Bon"
                     android:layout_width="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/editText_tempextcir4"
-                    android:textSize="14sp" />
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_tdrbcir4" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_tdrmcir4"
+                    android:layout_marginLeft="50dp"
+                    />
+
             </RadioGroup>
+
+
+
             <TextView
                 android:text="Contrôle de la pression d'eau dans le circuit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtempecir4"
+                android:layout_below="@+id/radioGroup_tdrcir4"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrprecir4" />
@@ -788,12 +932,44 @@
                     android:textSize="14sp" />
             </RadioGroup>
 
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrprecir4"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_verifprecir4">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_verifbprecir4" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_verifmprecir4"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
+
+
             <TextView
                 android:text="Contrôle visuel et auditif des circulateurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrviscir4"
-                android:layout_below="@+id/radioGroup_ctrprecir4"
+                android:layout_below="@+id/radioGroup_verifprecir4"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
@@ -861,7 +1037,7 @@
 
         </RelativeLayout>
 
-     </ScrollView>
+    </ScrollView>
 
 
- </RelativeLayout>
+</RelativeLayout>
