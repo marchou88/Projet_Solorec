@@ -206,7 +206,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="8"
                 android:id="@+id/editText_bar1"
                 android:layout_alignBaseline="@+id/textView_presm"
@@ -216,7 +216,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="8"
                 android:id="@+id/editText_bar2"
                 android:layout_alignBaseline="@+id/textView_pressou"
@@ -345,7 +345,8 @@
                 android:id="@+id/editText_n2d"
                 android:layout_alignBaseline="@+id/textView_n2d"
                 android:layout_alignBottom="@+id/textView_n2d"
-                android:layout_toEndOf="@+id/textView_n2d" />
+                android:layout_toEndOf="@+id/textView_n2d"
+                android:inputType="number"/>
 
             <TextView
                 android:text="D = "
@@ -363,7 +364,8 @@
                 android:id="@+id/editText_d"
                 android:layout_alignBaseline="@+id/textView_d"
                 android:layout_alignBottom="@+id/textView_d"
-                android:layout_toEndOf="@+id/textView_d" />
+                android:layout_toEndOf="@+id/textView_d"
+                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -410,7 +412,8 @@
                 android:id="@+id/editText_3d"
                 android:layout_alignBaseline="@+id/textView_3d"
                 android:layout_alignBottom="@+id/textView_3d"
-                android:layout_toEndOf="@+id/textView_3d" />
+                android:layout_toEndOf="@+id/textView_3d"
+                android:inputType="number"/>
 
             <TextView
                 android:text="hauteur piquage = "
@@ -428,7 +431,8 @@
                 android:id="@+id/editText_hp"
                 android:layout_alignBaseline="@+id/textView_hp"
                 android:layout_alignBottom="@+id/textView_hp"
-                android:layout_toEndOf="@+id/textView_hp" />
+                android:layout_toEndOf="@+id/textView_hp"
+                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -476,7 +480,8 @@
                 android:id="@+id/editText_voltv"
                 android:layout_alignBaseline="@+id/textView_voltv"
                 android:layout_alignBottom="@+id/textView_voltv"
-                android:layout_toEndOf="@+id/textView_voltv" />
+                android:layout_toEndOf="@+id/textView_voltv"
+                android:inputType="number"/>
             <TextView
                 android:text="Volume réel vase d'expansion : V(L) = "
                 android:layout_width="wrap_content"
@@ -493,7 +498,8 @@
                 android:id="@+id/editText_volrv"
                 android:layout_alignBaseline="@+id/textView_volrv"
                 android:layout_alignBottom="@+id/textView_volrv"
-                android:layout_toEndOf="@+id/textView_volrv" />
+                android:layout_toEndOf="@+id/textView_volrv"
+                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -532,7 +538,8 @@
                 android:id="@+id/editText_prest"
                 android:layout_alignBaseline="@+id/textView_prest"
                 android:layout_alignBottom="@+id/textView_prest"
-                android:layout_toEndOf="@+id/textView_prest" />
+                android:layout_toEndOf="@+id/textView_prest"
+                android:inputType="number"/>
             <TextView
                 android:text="Pression de gonflage réele : P(bar) = "
                 android:layout_width="wrap_content"
@@ -549,7 +556,8 @@
                 android:id="@+id/editText_presr"
                 android:layout_alignBaseline="@+id/textView_presr"
                 android:layout_alignBottom="@+id/textView_presr"
-                android:layout_toEndOf="@+id/textView_presr" />
+                android:layout_toEndOf="@+id/textView_presr"
+                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -604,7 +612,8 @@
                 android:id="@+id/editText_vth"
                 android:layout_alignBaseline="@+id/textView_vth"
                 android:layout_alignBottom="@+id/textView_vth"
-                android:layout_toEndOf="@+id/textView_vth" />
+                android:layout_toEndOf="@+id/textView_vth"
+                android:inputType="number"/>
             <TextView
                 android:text="Volume réel : V(L) = "
                 android:layout_width="wrap_content"
@@ -620,7 +629,8 @@
                 android:id="@+id/editText_vr"
                 android:layout_alignBaseline="@+id/textView_vr"
                 android:layout_alignBottom="@+id/textView_vr"
-                android:layout_toEndOf="@+id/textView_vr" />
+                android:layout_toEndOf="@+id/textView_vr"
+                android:inputType="number"/>
 
             <TextView
                 android:text="Pression théorique : P(bar) = "
@@ -638,7 +648,8 @@
                 android:id="@+id/editText_pth"
                 android:layout_alignBaseline="@+id/textView_pth"
                 android:layout_alignBottom="@+id/textView_pth"
-                android:layout_toEndOf="@+id/textView_pth" />
+                android:layout_toEndOf="@+id/textView_pth"
+                android:inputType="number"/>
             <TextView
                 android:text="Pression réele : P(bar) = "
                 android:layout_width="wrap_content"
@@ -655,7 +666,8 @@
                 android:id="@+id/editText_pr"
                 android:layout_alignBaseline="@+id/textView_pr"
                 android:layout_alignBottom="@+id/textView_pr"
-                android:layout_toEndOf="@+id/textView_pr" />
+                android:layout_toEndOf="@+id/textView_pr"
+                android:inputType="number" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -702,7 +714,8 @@
                 android:id="@+id/editText_dth"
                 android:layout_alignBaseline="@+id/textView_dth"
                 android:layout_alignBottom="@+id/textView_dth"
-                android:layout_toEndOf="@+id/textView_dth" />
+                android:layout_toEndOf="@+id/textView_dth"
+                android:inputType="number"/>
             <TextView
                 android:text="Débit réel : D(m3/s) = "
                 android:layout_width="wrap_content"
@@ -718,7 +731,8 @@
                 android:id="@+id/editText_dr"
                 android:layout_alignBaseline="@+id/textView_dr"
                 android:layout_alignBottom="@+id/textView_dr"
-                android:layout_toEndOf="@+id/textView_dr" />
+                android:layout_toEndOf="@+id/textView_dr"
+                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -810,7 +824,8 @@
                 android:id="@+id/editText_sectb"
                 android:layout_alignBaseline="@+id/textView_sectb"
                 android:layout_alignBottom="@+id/textView_sectb"
-                android:layout_toEndOf="@+id/textView_sectb" />
+                android:layout_toEndOf="@+id/textView_sectb"
+                android:inputType="number"/>
             <TextView
                 android:text="Section réele : S(m²) = "
                 android:layout_width="wrap_content"
@@ -826,7 +841,8 @@
                 android:id="@+id/editText_secrb"
                 android:layout_alignBaseline="@+id/textView_secrb"
                 android:layout_alignBottom="@+id/textView_secrb"
-                android:layout_toEndOf="@+id/textView_secrb" />
+                android:layout_toEndOf="@+id/textView_secrb"
+                android:inputType="number"/>
 
 
             <RadioGroup
@@ -874,7 +890,8 @@
                 android:id="@+id/editText_secth"
                 android:layout_alignBaseline="@+id/textView_secth"
                 android:layout_alignBottom="@+id/textView_secth"
-                android:layout_toEndOf="@+id/textView_secth" />
+                android:layout_toEndOf="@+id/textView_secth"
+                android:inputType="number"/>
             <TextView
                 android:text="Section réele : S(m²) = "
                 android:layout_width="wrap_content"
@@ -890,7 +907,8 @@
                 android:id="@+id/editText_sr"
                 android:layout_alignBaseline="@+id/textView_secrh"
                 android:layout_alignBottom="@+id/textView_secrh"
-                android:layout_toEndOf="@+id/textView_secrh" />
+                android:layout_toEndOf="@+id/textView_secrh"
+                android:inputType="number"/>
 
 
             <RadioGroup
@@ -961,7 +979,7 @@
                 android:layout_below= "@+id/radioGroup_calo"
                 android:id="@+id/textView_obsdim"/>
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="500dp"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/textView_obsdim"

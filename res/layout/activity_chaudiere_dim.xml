@@ -98,13 +98,31 @@
                 android:id="@+id/button_suivchdim"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/buttonsuivant" />
+
+            <TextView
+                android:text="Choix de l'installation "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/textView_chodim"
+                android:layout_below="@+id/button_suivchdim"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_chodim"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/spinner_chodim" />
+
             <TextView
                 android:text="Chaudière 1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_below="@+id/spinner_chodim"
+                android:layout_marginTop="20dp"
                 android:id="@+id/textView_ch1dim" />
 
             <TextView
@@ -120,7 +138,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="8"
                 android:id="@+id/editText_puisct1"
                 android:layout_alignBaseline="@+id/textView_puisct1"
@@ -140,7 +158,7 @@
                 android:layout_width="wrap_content"
                 android:ems="10"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:id="@+id/editText_puiscr1"
                 android:layout_below="@+id/editText_puisct1"
                 android:layout_toEndOf="@+id/textView_puiscr1" />
@@ -160,7 +178,8 @@
                 android:orientation="horizontal"
                 android:layout_alignTop="@+id/textView_dimc1"
                 android:layout_toEndOf="@+id/textView_dimc1"
-                android:layout_marginStart="23dp">
+                android:layout_marginStart="23dp"
+                android:id="@+id/radioGroup_c1">
 
             <RadioButton
                 android:text="Bon"
@@ -179,9 +198,8 @@
                 android:text="Chaudière 2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="250dp"
+                android:layout_below="@+id/radioGroup_c1"
                 android:id="@+id/textView_ch2dim" />
 
             <TextView
@@ -197,7 +215,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="8"
                 android:id="@+id/editText_puisct2"
                 android:layout_alignBaseline="@+id/textView_puisct2"
@@ -216,7 +234,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="10"
                 android:id="@+id/editText_puiscr2"
                 android:layout_below="@+id/editText_puisct2"
@@ -237,7 +255,8 @@
                 android:orientation="horizontal"
                 android:layout_alignTop="@+id/textView_dimc2"
                 android:layout_toEndOf="@+id/textView_dimc2"
-                android:layout_marginStart="23dp">
+                android:layout_marginStart="23dp"
+                android:id="@+id/radioGroup_c2">
 
                 <RadioButton
                     android:text="Bon"
@@ -257,9 +276,8 @@
                 android:text="Chaudière 3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/radioGroup_c2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="430dp"
                 android:id="@+id/textView_ch3dim" />
 
             <TextView
@@ -275,7 +293,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="8"
                 android:id="@+id/editText_puisct3"
                 android:layout_alignBaseline="@+id/textView_puisct3"
@@ -294,7 +312,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="10"
                 android:id="@+id/editText_puiscr3"
                 android:layout_below="@+id/editText_puisct3"
@@ -315,7 +333,8 @@
                 android:orientation="horizontal"
                 android:layout_alignTop="@+id/textView_dimc3"
                 android:layout_toEndOf="@+id/textView_dimc3"
-                android:layout_marginStart="23dp">
+                android:layout_marginStart="23dp"
+                android:id="@+id/radioGroup_c3">
 
                 <RadioButton
                     android:text="Bon"
@@ -335,9 +354,9 @@
                 android:text="Chaudière 4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
+                android:layout_below="@+id/radioGroup_c3"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="610dp"
+
                 android:id="@+id/textView_ch4dim" />
 
             <TextView
@@ -353,7 +372,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="8"
                 android:id="@+id/editText_puisct4"
                 android:layout_alignBaseline="@+id/textView_puisct4"
@@ -372,7 +391,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:ems="10"
                 android:id="@+id/editText_puiscr4"
                 android:layout_below="@+id/editText_puisct4"

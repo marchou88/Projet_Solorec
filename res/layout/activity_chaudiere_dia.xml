@@ -167,6 +167,33 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch1"/>
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_rendch1"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_rendch1">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_brendch1" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mrendch1"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
             <TextView
                 android:text="Contrôle de la pression gaz (mBar)"
                 android:layout_marginTop="20dp"
@@ -174,7 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch1"
-                android:layout_below="@+id/editText_rendch1"
+                android:layout_below="@+id/radioGroup_rendch1"
                 android:id="@+id/textView_ctrgch1" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -185,13 +212,38 @@
                 android:layout_below="@+id/textView_ctrgch1"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_pgazch1"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_pgazch1">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_bpgazch1" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mpgazch1"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrflch1"
-                android:layout_below="@+id/editText_pgazch1"
+                android:layout_below="@+id/radioGroup_pgazch1"
                 android:layout_centerHorizontal="true" />
 
 
@@ -202,7 +254,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView_ctrflch1"
                 android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch1">
+                android:id="@+id/radioGroup_ctrflch1"
+                android:layout_marginTop="10dp">
 
 
                 <RadioButton
@@ -412,13 +465,39 @@
                 android:id="@+id/editText_ctrtfumch1"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch1"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch1"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_ctrtfumch1">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch1"
+                    android:id="@+id/radioButton_bctrtfumch1" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mctrtfumch1"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
             <TextView
                 android:text="Chaudière 2"
-                android:layout_below="@+id/editText_ctrtfumch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrtfumch1"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:id="@+id/textView_ch2dia" />
 
             <TextView
@@ -439,6 +518,33 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch2"/>
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_rendch2"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_rendch2">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch2"
+                    android:id="@+id/radioButton_brendch2" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mrendch2"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
             <TextView
                 android:text="Contrôle de la pression gaz (mBar)"
                 android:layout_marginTop="20dp"
@@ -446,7 +552,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch2"
-                android:layout_below="@+id/editText_rendch2"
+                android:layout_below="@+id/radioGroup_rendch2"
                 android:id="@+id/textView_ctrgch2" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -455,14 +561,40 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/editText_pgazch2"
                 android:layout_below="@+id/textView_ctrgch2"
+                android:layout_marginTop="20dp"
                 android:textSize="14sp" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_pgazch2"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_pgazch2">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch2"
+                    android:id="@+id/radioButton_bpgazch2" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mpgazch2"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrflch2"
-                android:layout_below="@+id/editText_pgazch2"
+                android:layout_below="@+id/radioGroup_pgazch2"
                 android:layout_centerHorizontal="true" />
 
 
@@ -473,7 +605,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView_ctrflch2"
                 android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch2">
+                android:id="@+id/radioGroup_ctrflch2"
+                android:layout_marginTop="10dp">
 
 
                 <RadioButton
@@ -683,17 +816,42 @@
                 android:id="@+id/editText_ctrtfumch2"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch2"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch2"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_ctrtfumch2">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch2"
+                    android:id="@+id/radioButton_bctrtfumch2" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mctrtfumch2"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
             <TextView
                 android:text="Chaudière 3"
-                android:layout_below="@+id/editText_ctrtfumch2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrtfumch2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:id="@+id/textView_ch3dia" />
 
             <TextView
-                android:text="Rendement de combustion(%) "
+                android:text="Rendement de combustion (%) "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -710,6 +868,33 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch3"/>
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_rendch3"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_rendch3">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch3"
+                    android:id="@+id/radioButton_brendch3" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mrendch3"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
             <TextView
                 android:text="Contrôle de la pression gaz (mBar)"
                 android:layout_marginTop="20dp"
@@ -717,7 +902,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch3"
-                android:layout_below="@+id/editText_rendch3"
+                android:layout_below="@+id/radioGroup_rendch3"
                 android:id="@+id/textView_ctrgch3" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -726,14 +911,40 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/editText_pgazch3"
                 android:layout_below="@+id/textView_ctrgch3"
+                android:layout_marginTop="20dp"
                 android:textSize="14sp" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_pgazch3"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_pgazch3">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch3"
+                    android:id="@+id/radioButton_bpgazch3" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mpgazch3"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrflch3"
-                android:layout_below="@+id/editText_pgazch3"
+                android:layout_below="@+id/radioGroup_pgazch3"
                 android:layout_centerHorizontal="true" />
 
 
@@ -744,7 +955,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView_ctrflch3"
                 android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch3">
+                android:id="@+id/radioGroup_ctrflch3"
+                android:layout_marginTop="10dp">
 
 
                 <RadioButton
@@ -954,14 +1166,38 @@
                 android:id="@+id/editText_ctrtfumch3"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch3"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch3"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_ctrtfumch3">
 
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch3"
+                    android:id="@+id/radioButton_bctrtfumch3" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mctrtfumch3"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
             <TextView
                 android:text="Chaudière 4"
-                android:layout_below="@+id/editText_ctrtfumch3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_ctrtfumch3"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:id="@+id/textView_ch4dia" />
 
             <TextView
@@ -982,6 +1218,33 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch4"/>
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_rendch4"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_rendch4">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch4"
+                    android:id="@+id/radioButton_brendch4" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mrendch4"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
             <TextView
                 android:text="Contrôle de la pression gaz (mBar)"
                 android:layout_marginTop="20dp"
@@ -989,7 +1252,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch4"
-                android:layout_below="@+id/editText_rendch4"
+                android:layout_below="@+id/radioGroup_rendch4"
                 android:id="@+id/textView_ctrgch4" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -998,14 +1261,40 @@
                 android:inputType="numberDecimal"
                 android:id="@+id/editText_pgazch4"
                 android:layout_below="@+id/textView_ctrgch4"
+                android:layout_marginTop="20dp"
                 android:textSize="14sp" />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_pgazch4"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_pgazch4">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch4"
+                    android:id="@+id/radioButton_bpgazch4" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mpgazch4"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrflch4"
-                android:layout_below="@+id/editText_pgazch4"
+                android:layout_below="@+id/radioGroup_pgazch4"
                 android:layout_centerHorizontal="true" />
 
 
@@ -1016,7 +1305,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/textView_ctrflch4"
                 android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch4">
+                android:id="@+id/radioGroup_ctrflch4"
+                android:layout_marginTop="10dp">
 
 
                 <RadioButton
@@ -1226,6 +1516,33 @@
                 android:id="@+id/editText_ctrtfumch4"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch4"/>
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch4"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_ctrtfumch4">
+
+
+                <RadioButton
+                    android:text="Bon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/textView_ctrgch4"
+                    android:id="@+id/radioButton_bctrtfumch4" />
+
+                <RadioButton
+                    android:text="Mauvais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioButton_mctrtfumch4"
+                    android:layout_marginLeft="50dp"
+                    />
+
+            </RadioGroup>
+
+
 
 
         </RelativeLayout>

@@ -45,14 +45,15 @@
         <activity
             android:name=".activity_connexion"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".activity_debut_dec"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".activity_chaudiere_dec"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity android:name=".activity_fin_dec"
-            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name=".activity_debut_dec"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_chaudiere_dec"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity_fin_dec"
+            android:windowSoftInputMode="stateHidden" />
     </application>
-
-
 
 </manifest>

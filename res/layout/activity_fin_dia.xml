@@ -106,7 +106,7 @@
 
     </RadioGroup>
     <TextView
-        android:text="Contrôle de la conformité des températures ECS (Départ/Retour)"
+        android:text="Cohérence des températures ECS (Départ/Retour)"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radioGroup_ctrvas"
@@ -159,12 +159,38 @@
         android:layout_width="140dp"
         android:textSize="14sp" />
     </RadioGroup>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/radioGroup_temprecs"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/radioGroup_trecs">
+
+
+        <RadioButton
+            android:text="Bon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView_ctrgch1"
+            android:id="@+id/radioButton_btrecs" />
+
+        <RadioButton
+            android:text="Mauvais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_mtrecs"
+            android:layout_marginLeft="50dp"
+            />
+
+    </RadioGroup>
     <TextView
-        android:text="Contrôle du fon fonctionnement du tableau électrique"
+        android:text="Contrôle du bon fonctionnement du tableau électrique"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView_ctrtab"
-        android:layout_below="@+id/radioGroup_temprecs"
+        android:layout_below="@+id/radioGroup_trecs"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true" />
 
