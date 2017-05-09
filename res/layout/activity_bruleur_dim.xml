@@ -69,7 +69,7 @@
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
            <!-- <Button
                 android:text="Suivant"
@@ -111,9 +111,7 @@
                   android:layout_below="@+id/button_suivbdim"
                   android:id="@+id/textView_bru1"
                   android:layout_centerHorizontal="true" />
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></RelativeLayout>
+
               <TextView
                   android:text="Puissance théorique (kW) :    P="
                   android:layout_width="wrap_content"
@@ -341,82 +339,7 @@
                   android:layout_marginStart="70dp" />
 
 
-              <TextView
-                  android:text="Bruleur 4"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="550dp"
-                  android:id="@+id/textView_bru4"
-                  android:layout_centerHorizontal="true" />
-              <TextView
-                  android:text="Puissance théorique (kW) :    P="
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@+id/textView_bru4"
-                  android:layout_alignParentStart="true"
-                  android:layout_marginStart="35dp"
-                  android:layout_marginTop="22dp"
-                  android:id="@+id/textView_puisbt4" />
 
-              <TextView
-                  android:text="Puissance nécessaire (kW) :  P="
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@+id/textView_puisbt4"
-                  android:layout_alignStart="@+id/textView_puisbt4"
-                  android:layout_marginTop="21dp"
-                  android:id="@+id/textView_puisbn4" />
-
-              <TextView
-                  android:text="Dimensionnement : "
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:layout_below="@+id/textView_puisbn4"
-                  android:layout_alignStart="@+id/textView_puisbn4"
-                  android:layout_marginTop="20dp"
-                  android:id="@+id/textView_dimb4" />
-
-              <RadioGroup
-                  android:layout_width="fill_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="horizontal"
-                  android:layout_alignTop="@+id/textView_dimb4"
-                  android:layout_toEndOf="@+id/textView_dimb4"
-                  android:layout_marginStart="23dp">
-                  <RadioButton
-                      android:text="Bon"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/radioButton_bb4" />
-
-                  <RadioButton
-                      android:text="Mauvais"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/radioButton_mb4" />
-              </RadioGroup>
-
-              <EditText
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:inputType="number"
-                  android:ems="8"
-                  android:id="@+id/editText_puisbt4"
-                  android:layout_alignBaseline="@+id/textView_puisbt4"
-                  android:layout_alignBottom="@+id/textView_puisbt4"
-                  android:layout_toEndOf="@+id/textView_dimb4"
-                  android:layout_marginStart="70dp" />
-
-              <EditText
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:inputType="number"
-                  android:ems="8"
-                  android:id="@+id/editText_puisbn4"
-                  android:layout_alignBaseline="@+id/textView_puisbn4"
-                  android:layout_alignBottom="@+id/textView_puisbn4"
-                  android:layout_toEndOf="@+id/textView_dimb4"
-                  android:layout_marginStart="70dp" />
 
           </RelativeLayout>
       </ScrollView>
