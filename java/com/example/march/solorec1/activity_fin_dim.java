@@ -58,5 +58,5 @@ public class activity_fin_dim extends AppCompatActivity {
         Intent intentBackToMenu = new Intent();
         intentBackToMenu.setClass(this, activity_menu.class);
         startActivity(intentBackToMenu);
-    };
+    }
 }
