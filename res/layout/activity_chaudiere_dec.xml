@@ -161,24 +161,22 @@
 
 </RadioGroup>
 
-
-            <TextView
-                android:text="Combustible :"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_comch1"
-                android:layout_below="@+id/radioGroup_modch1"
-                android:layout_alignLeft="@+id/radioGroup_modch1"
-                android:layout_marginTop="20dp" />
-
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/radiogroup_comch1"
-                android:layout_alignTop="@+id/textView_comch1"
-                android:layout_toEndOf="@+id/textView_comch1"
-                android:layout_marginLeft="55dp">
+                android:layout_below="@+id/radioGroup_modch1"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                android:text="Combustible :"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_comch1" />
+
+
 
                 <RadioButton
                     android:text="Fioul"
@@ -194,45 +192,25 @@
                     android:id="@+id/radioButton_gazch1"/>
             </RadioGroup>
 
-            <TextView
-                android:text="Condensation :"
+
+
+            <CheckBox
+                android:text="Chaudière à condensation"
                 android:layout_width="wrap_content"
+                android:layout_below="@+id/radiogroup_comch1"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_condch1"
-                android:layout_below="@id/textView_comch1"
-                android:layout_marginTop="30dp"
-                android:layout_alignLeft="@id/textView_comch1"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/radiogroup_condch1"
-                android:layout_alignTop="@+id/textView_condch1"
-                android:layout_toEndOf="@+id/textView_condch1"
-                android:layout_marginLeft="55dp">
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_ouich1"/>
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_nonch1"/>
-            </RadioGroup>
-
+                android:id="@+id/checkBox_condch1"/>
 
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:id="@+id/radioGroup_rolch1"
-                android:layout_below="@+id/radiogroup_condch1"
+                android:layout_below="@+id/checkBox_condch1"
                 android:layout_centerHorizontal="true">
                 <TextView
                     android:text="Rôle :"
@@ -260,14 +238,16 @@
             </RadioGroup>
 
 
+
+
             <TextView
                 android:text="- Chaudière 2 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_ch2"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_rolch1"
-                android:layout_marginTop="30dp"/>
+                android:id="@+id/textView_ch2"
+                android:layout_below= "@+id/radioGroup_rolch1"
+            android:layout_marginTop="40dp"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -320,24 +300,22 @@
 
             </RadioGroup>
 
-
-            <TextView
-                android:text="Combustible :"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_comch2"
-                android:layout_below="@+id/radioGroup_modch2"
-                android:layout_alignLeft="@+id/radioGroup_modch2"
-                android:layout_marginTop="20dp" />
-
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/radiogroup_comch2"
-                android:layout_alignTop="@+id/textView_comch2"
-                android:layout_toEndOf="@+id/textView_comch2"
-                android:layout_marginLeft="55dp">
+                android:layout_below="@+id/radioGroup_modch2"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:text="Combustible :"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_comch2" />
+
+
 
                 <RadioButton
                     android:text="Fioul"
@@ -353,45 +331,25 @@
                     android:id="@+id/radioButton_gazch2"/>
             </RadioGroup>
 
-            <TextView
-                android:text="Condensation :"
+
+
+            <CheckBox
+                android:text="Chaudière à condensation"
                 android:layout_width="wrap_content"
+                android:layout_below="@+id/radiogroup_comch2"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_condch2"
-                android:layout_below="@id/textView_comch2"
-                android:layout_marginTop="30dp"
-                android:layout_alignLeft="@id/textView_comch2"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/radiogroup_condch2"
-                android:layout_alignTop="@+id/textView_condch2"
-                android:layout_toEndOf="@+id/textView_condch2"
-                android:layout_marginLeft="55dp">
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_ouich2"/>
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_nonch2"/>
-            </RadioGroup>
-
+                android:id="@+id/checkBox_condch2"/>
 
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:id="@+id/radioGroup_rolch2"
-                android:layout_below="@+id/radiogroup_condch2"
+                android:layout_below="@+id/checkBox_condch2"
                 android:layout_centerHorizontal="true">
                 <TextView
                     android:text="Rôle :"
@@ -418,14 +376,19 @@
                     android:id="@+id/checkBox_rolch2"/>
             </RadioGroup>
 
+
+
+
+
+
             <TextView
                 android:text="- Chaudière 3 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_ch3"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_rolch2"
-                android:layout_marginTop="30dp"/>
+                android:id="@+id/textView_ch3"
+                android:layout_below= "@+id/radioGroup_rolch2"
+                android:layout_marginTop="40dp"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -478,24 +441,22 @@
 
             </RadioGroup>
 
-
-            <TextView
-                android:text="Combustible :"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_comch3"
-                android:layout_below="@+id/radioGroup_modch3"
-                android:layout_alignLeft="@+id/radioGroup_modch3"
-                android:layout_marginTop="20dp" />
-
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/radiogroup_comch3"
-                android:layout_alignTop="@+id/textView_comch3"
-                android:layout_toEndOf="@+id/textView_comch3"
-                android:layout_marginLeft="55dp">
+                android:layout_below="@+id/radioGroup_modch3"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:text="Combustible :"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_comch3" />
+
+
 
                 <RadioButton
                     android:text="Fioul"
@@ -511,45 +472,25 @@
                     android:id="@+id/radioButton_gazch3"/>
             </RadioGroup>
 
-            <TextView
-                android:text="Condensation :"
+
+
+            <CheckBox
+                android:text="Chaudière à condensation"
                 android:layout_width="wrap_content"
+                android:layout_below="@+id/radiogroup_comch3"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_condch3"
-                android:layout_below="@id/textView_comch3"
-                android:layout_marginTop="30dp"
-                android:layout_alignLeft="@id/textView_comch3"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/radiogroup_condch3"
-                android:layout_alignTop="@+id/textView_condch3"
-                android:layout_toEndOf="@+id/textView_condch3"
-                android:layout_marginLeft="55dp">
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_ouich3"/>
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_nonch3"/>
-            </RadioGroup>
-
+                android:id="@+id/checkBox_condch3"/>
 
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:id="@+id/radioGroup_rolch3"
-                android:layout_below="@+id/radiogroup_condch3"
+                android:layout_below="@+id/checkBox_condch3"
                 android:layout_centerHorizontal="true">
                 <TextView
                     android:text="Rôle :"
@@ -577,14 +518,17 @@
             </RadioGroup>
 
 
+
+
+
             <TextView
                 android:text="- Chaudière 4 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_ch4"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_rolch3"
-                android:layout_marginTop="30dp"/>
+                android:id="@+id/textView_ch4"
+                android:layout_below= "@+id/radioGroup_rolch3"
+                android:layout_marginTop="40dp"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -637,24 +581,22 @@
 
             </RadioGroup>
 
-
-            <TextView
-                android:text="Combustible :"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView_comch4"
-                android:layout_below="@+id/radioGroup_modch4"
-                android:layout_alignLeft="@+id/radioGroup_modch4"
-                android:layout_marginTop="20dp" />
-
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/radiogroup_comch4"
-                android:layout_alignTop="@+id/textView_comch4"
-                android:layout_toEndOf="@+id/textView_comch4"
-                android:layout_marginLeft="55dp">
+                android:layout_below="@+id/radioGroup_modch4"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:text="Combustible :"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_comch4" />
+
+
 
                 <RadioButton
                     android:text="Fioul"
@@ -670,45 +612,25 @@
                     android:id="@+id/radioButton_gazch4"/>
             </RadioGroup>
 
-            <TextView
-                android:text="Condensation :"
+
+
+            <CheckBox
+                android:text="Chaudière à condensation"
                 android:layout_width="wrap_content"
+                android:layout_below="@+id/radiogroup_comch4"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView_condch4"
-                android:layout_below="@id/textView_comch4"
-                android:layout_marginTop="30dp"
-                android:layout_alignLeft="@id/textView_comch4"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:id="@+id/radiogroup_condch4"
-                android:layout_alignTop="@+id/textView_condch4"
-                android:layout_toEndOf="@+id/textView_condch4"
-                android:layout_marginLeft="55dp">
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_ouich4"/>
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_nonch4"/>
-            </RadioGroup>
-
+                android:id="@+id/checkBox_condch4"/>
 
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:id="@+id/radioGroup_rolch4"
-                android:layout_below="@+id/radiogroup_condch4"
+                android:layout_below="@+id/checkBox_condch4"
                 android:layout_centerHorizontal="true">
                 <TextView
                     android:text="Rôle :"
@@ -734,6 +656,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_rolch4"/>
             </RadioGroup>
+
+
+
 
 
 
