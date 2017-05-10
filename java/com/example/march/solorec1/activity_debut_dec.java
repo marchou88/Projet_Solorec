@@ -21,7 +21,6 @@ public class activity_debut_dec extends AppCompatActivity {
     private ImageButton btnretourdebdec;
     private ImageButton btnsuivdebdec;
     private Spinner spinner3;
-    private CheckBox checkBoxalimgaz;
     private RadioGroup rgpressgazd;
 
     @Override

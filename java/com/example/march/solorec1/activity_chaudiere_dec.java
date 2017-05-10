@@ -45,6 +45,11 @@ public class activity_chaudiere_dec extends AppCompatActivity {
         });
     }
 
+
+
+
+
+
     private void GoToFinDec() {
         Intent intentGoToFinDec = new Intent();
         intentGoToFinDec.setClass(this, activity_fin_dec.class);

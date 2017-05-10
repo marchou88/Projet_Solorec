@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 
 public class activity_fin_dec extends AppCompatActivity {
 
@@ -13,11 +16,19 @@ public class activity_fin_dec extends AppCompatActivity {
     private ImageButton btnretourfindec;
     private ImageButton btnvaldec;
     private ImageButton btnprecfindec;
+    private RadioGroup rgdiam,rghaut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fin_dec);
+
+
+        rgdiam = (RadioGroup)findViewById(R.id.radioGroup_diam);
+        rgdiam.setVisibility(RelativeLayout.INVISIBLE);
+        rghaut = (RadioGroup)findViewById(R.id.radioGroup_haut);
+        rghaut.setVisibility(RelativeLayout.INVISIBLE);
+
 
         btnretourfindec = (ImageButton) findViewById(R.id.button_retourfindec);
         btnprecfindec = (ImageButton) findViewById(R.id.button_precfindec) ;
@@ -44,6 +55,24 @@ public class activity_fin_dec extends AppCompatActivity {
                 SendGoToMenu();
             }
         });
+    }
+
+
+
+
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which checkbox was clicked
+        switch (view.getId()) {
+            case R.id.checkbox_mel:
+                if (checked){rgdiam.setVisibility(RadioGroup.VISIBLE);
+                    rghaut.setVisibility(RadioGroup.VISIBLE);}
+                else {rghaut.setVisibility(RadioGroup.INVISIBLE);
+                    rgdiam.setVisibility(RadioGroup.INVISIBLE);}
+                break;
+        }
     }
     private void GoToChaudDec() {
         Intent intentGoToChaudDec = new Intent();

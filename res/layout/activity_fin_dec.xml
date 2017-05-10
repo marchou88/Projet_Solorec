@@ -26,29 +26,29 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:layout_alignParentEnd="true" />
-  <!--   <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_retourfindec"
-        android:text="Menu"
-        android:background="@android:color/holo_orange_dark"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:elevation="0dp"
-        android:textColor="@android:color/background_light"
-        android:layout_marginRight="20dp"
-        android:layout_alignBottom="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="25dp" /> -->
+    <!--   <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/button_retourfindec"
+          android:text="Menu"
+          android:background="@android:color/holo_orange_dark"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:elevation="0dp"
+          android:textColor="@android:color/background_light"
+          android:layout_marginRight="20dp"
+          android:layout_alignBottom="@+id/toolbar"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="25dp" /> -->
 
-<ImageView
-    android:layout_width="200dp"
-    android:layout_height="65dp"
-    app:srcCompat="@drawable/logotranspa"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentStart="true"
-    android:id="@+id/imageView5" />
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/logotranspa"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageView5" />
 
     <TextView
         android:text="Déclaration d'une installation"
@@ -133,21 +133,30 @@
                 android:layout_alignStart="@+id/textView_nbcir"
                 android:layout_marginTop="20dp"
                 android:id="@+id/editText_nbssstat" />
-            <TextView
-                android:text="Type ECS"
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText_nbssstat"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView_ecs" />
+                android:id="@+id/layout_ecs"
+                >
+
+
+
+            <TextView
+                android:text="Type ECS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_ecs"
+                android:layout_centerHorizontal="true"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_ecs"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_marginTop="20dp"
                 android:id="@+id/radioGroup_ecs">
 
@@ -174,14 +183,14 @@
                     android:id="@+id/radioButton_acc"
                     android:layout_marginLeft="20dp"
                     />
-
-
             </RadioGroup>
+        </RelativeLayout>
+
             <TextView
                 android:text="Vase d'expansion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ecs"
+                android:layout_below="@+id/layout_ecs"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView_vase"/>
@@ -228,7 +237,6 @@
                 android:ems="10"
                 android:layout_below="@+id/textView_voldec"
                 android:layout_alignStart="@+id/textView_nbcir"
-                android:layout_marginTop="20dp"
                 android:id="@+id/editText_voldec" />
             <CheckBox
                 android:layout_width="wrap_content"
@@ -237,56 +245,54 @@
                 android:id="@+id/checkbox_mel"
                 android:layout_below="@+id/editText_voldec"
                 android:layout_centerHorizontal="true"
-                android:text="Présence d'une bouteille de mélange" />
-            <TextView
-                android:text="Bouteille de mélange"
+                android:text="Présence d'une bouteille de mélange"
+                android:onClick="onCheckboxClicked"/>
+
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/checkbox_mel"
-                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView_bout"/>
-
+                android:id="@+id/radioGroup_diam">
             <TextView
-                android:text="Diamètre"
+                android:text="Diamètre : "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_bout"
-                android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
                 android:id="@+id/textView_diam"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:layout_below="@+id/textView_diam"
-                android:layout_alignStart="@+id/textView_nbcir"
-                android:layout_marginTop="20dp"
                 android:id="@+id/editText_diam" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_diam"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/radioGroup_haut">
             <TextView
                 android:text="Hauteur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText_diam"
-                android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
                 android:id="@+id/textView_haut"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:layout_below="@+id/textView_haut"
-                android:layout_alignStart="@+id/textView_nbcir"
-                android:layout_marginTop="20dp"
                 android:id="@+id/editText_haut" />
+            </RadioGroup>
             <TextView
                 android:text="Circulateur 1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText_haut"
-                android:layout_marginTop="50dp"
+                android:layout_below="@+id/radioGroup_haut"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView_cir1dec"/>
             <RadioGroup
@@ -490,47 +496,23 @@
                 android:layout_marginTop="40dp"
                 android:id="@+id/editText_hmtci4" />
 
-            <TextView
-                android:text="Filtre à boue"
+
+            <CheckBox
+                android:text="Présence d'un filtre à boue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText_hmtci4"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView_boue"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_boue"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:id="@+id/radioGroup_boue">
+                android:id="@+id/checkBox_boue"/>
 
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/radioGroup_vitci4"
-                    android:id="@+id/radioButton_ouib"
-                    android:layout_marginLeft="20dp"/>
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_nonb"
-                    android:layout_marginLeft="50dp"
-                    />
-            </RadioGroup>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/checkbox_red"
-                android:layout_below="@+id/radioGroup_boue"
+                android:layout_below="@+id/checkBox_boue"
                 android:layout_centerHorizontal="true"
                 android:text="Présence d'un réduit" />
             <TextView
@@ -543,13 +525,13 @@
                 android:id="@+id/textView_hor" />
 
             <TextView
-            android:text="Début réduit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_hor"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="212dp"
-            android:id="@+id/textView_debr" />
+                android:text="Début réduit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_hor"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="212dp"
+                android:id="@+id/textView_debr" />
 
             <TextView
                 android:text="h"
@@ -637,37 +619,16 @@
                 android:layout_toEndOf="@+id/textView_DTr"
                 android:id="@+id/editText_DTr" />
 
-            <TextView
-                android:text="Accesibilité pieds de colonne"
+
+            <CheckBox
+                android:text="Pieds de colonne accessibles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/editText_DTr"
                 android:layout_marginTop="20dp"
-                android:id="@+id/textView_pdc" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textView_pdc"
-                android:id="@+id/radioGroup_pdc">
+                android:id="@+id/checkBox_pdc"/>
 
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_apco" />
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_apcn" />
-            </RadioGroup>
 
 
             <TextView
@@ -676,7 +637,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_pdc"
+                android:layout_below="@+id/checkBox_pdc"
                 android:id="@+id/textView_obs" />
 
             <EditText

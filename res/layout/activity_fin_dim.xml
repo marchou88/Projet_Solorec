@@ -25,21 +25,21 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:layout_alignParentEnd="true" />
- <!--   <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_retourfindim"
-        android:text="Menu"
-        android:background="@android:color/holo_blue_bright"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:elevation="0dp"
-        android:textColor="@android:color/background_light"
-        android:layout_marginRight="20dp"
-        android:layout_alignBottom="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="25dp" /> -->
+    <!--   <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/button_retourfindim"
+           android:text="Menu"
+           android:background="@android:color/holo_blue_bright"
+           style="@style/Widget.AppCompat.Button.Borderless"
+           android:elevation="0dp"
+           android:textColor="@android:color/background_light"
+           android:layout_marginRight="20dp"
+           android:layout_alignBottom="@+id/toolbar"
+           android:layout_alignParentRight="true"
+           android:layout_marginTop="10dp"
+           android:layout_marginBottom="10dp"
+           android:layout_marginStart="25dp" /> -->
 
 
     <ImageView
@@ -62,7 +62,7 @@
         android:layout_marginTop="17dp" />
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
         android:layout_below="@+id/toolbar">
@@ -80,8 +80,9 @@
                 android:layout_alignParentStart="true"
                 android:background="@drawable/buttonprecedent" />
 
+
             <TextView
-                android:text="Soupapes de sécurité"
+                android:text="- Soupapes de sécurité -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -89,234 +90,147 @@
                 android:layout_marginTop="50dp"
                 android:id="@+id/textView_soup" />
 
+
+
             <TextView
                 android:text="Contrôler la conformité des soupapaes de sécurité (voir plaque signalétique chaudière)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_soup"
-                android:layout_marginTop="19dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
                 android:id="@+id/textView_ctrsoup"
                 android:layout_marginStart="10dp" />
 
-            <TextView
-                android:text="Pression Max (bar) :           P="
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_ctrsoup"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="22dp"
-                android:id="@+id/textView_presm" />
-
-            <TextView
-                android:text="Pression soupape (bar) :   P="
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_presm"
-                android:layout_alignStart="@+id/textView_presm"
-                android:layout_marginTop="21dp"
-                android:id="@+id/textView_pressou" />
-
-            <TextView
-                android:text="Dimensionnement : "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_pressou"
-                android:layout_alignStart="@+id/textView_pressou"
-                android:layout_marginTop="33dp"
-                android:id="@+id/textView_dimsou" />
-
             <RadioGroup
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_alignTop="@+id/textView_dimsou"
-                android:layout_toEndOf="@+id/textView_dimsou"
-                android:layout_marginStart="23dp">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bsou" />
+                android:id="@+id/radioGroup_presm"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/textView_ctrsoup">
 
-                <RadioButton
-                    android:text="Mauvais"
+                <TextView
+                    android:text="Pression Max (bar) :  P="
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_msou" />
+                    android:id="@+id/textView_presm" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:inputType="number"
+                    android:ems="8"
+                    android:id="@+id/editText_presm" />
+
             </RadioGroup>
 
-            <TextView
-                android:text="Pompes"
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_dimsou"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_pressou"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup_presm">
+
+                <TextView
+                    android:text="Pression soupape (bar) : P="
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/textView_pressou" />
+
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="8"
+                    android:id="@+id/editText_bar2" />
+
+            </RadioGroup>
+
+
+            <CheckBox
+                android:text="Dimensionnement correct"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_pressou"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/checkBox_dimsou"/>
+
+
+
+
+            <TextView
+                android:text="- Pompes -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/checkBox_dimsou"
                 android:layout_marginTop="30dp"
-                android:id="@+id/textView_pom"
-                android:layout_toEndOf="@+id/textView_dimsou" />
+                android:id="@+id/textView_pom" />
 
             <TextView
                 android:text="Vérifier le point de courbe de chaque pompe (voir Abbaques)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/textView_pom"
-                android:layout_marginTop="19dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
                 android:id="@+id/textView_aba" />
 
 
-            <TextView
-                android:text="Circulateur n°1 "
+            <CheckBox
+                android:text="Circulateur 1 bien dimensionné"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_aba"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="15dp"
-                android:id="@+id/textView_c1" />
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/checkBox_c1"/>
+
+            <CheckBox
+                android:text="Circulateur 2 bien dimensionné"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/checkBox_c1"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/checkBox_c2"/>
+
+            <CheckBox
+                android:text="Circulateur 3 bien dimensionné"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/checkBox_c2"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/checkBox_c3"/>
+
+            <CheckBox
+                android:text="Circulateur 4 bien dimensionné"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/checkBox_c3"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/checkBox_c4"/>
+
+
+
+
+
+
 
             <TextView
-                android:text="Circulateur n°2 "
+                android:text="- Bouteille de mélange -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_c1"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="12dp"
-                android:id="@+id/textView_c2" />
-            <TextView
-                android:text="Circulateur n°3 "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_c2"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="12dp"
-                android:id="@+id/textView_c3" />
-            <TextView
-                android:text="Circulateur n°4 "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_c3"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="12dp"
-                android:id="@+id/textView_c4" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="8"
-                android:id="@+id/editText_bar1"
-                android:layout_alignBaseline="@+id/textView_presm"
-                android:layout_alignBottom="@+id/textView_presm"
-                android:layout_toEndOf="@+id/textView_presm" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="8"
-                android:id="@+id/editText_bar2"
-                android:layout_alignBaseline="@+id/textView_pressou"
-                android:layout_alignBottom="@+id/textView_pressou"
-                android:layout_toEndOf="@+id/textView_pressou" />
-
-            <RadioGroup
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/textView_aba"
-                android:layout_marginTop="7dp"
-                android:layout_marginStart="150dp"
-                android:id="@+id/radioGroup_bci1">
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bci1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mci1"
-                    />
-            </RadioGroup>
-
-            <RadioGroup
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/radioGroup_bci1"
-                android:layout_marginStart="150dp"
-                android:id="@+id/radioGroup_bci2">
-
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bci2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mci2" />
-            </RadioGroup>
-
-            <RadioGroup
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/radioGroup_bci2"
-                android:layout_marginStart="150dp"
-                android:id="@+id/radioGroup_bci3">
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bci3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mci3" />
-            </RadioGroup>
-
-            <RadioGroup
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/radioGroup_bci3"
-                android:layout_marginStart="150dp"
-                android:id="@+id/radioGroup_bci4">
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bci4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mci4"
-                    />
-            </RadioGroup>
-
-            <TextView
-                android:text="Bouteille de mélange"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/radioGroup_bci4"
-                android:layout_marginTop="50dp"
+                android:layout_below="@+id/checkBox_c4"
+                android:layout_marginTop="30dp"
                 android:id="@+id/textView_bout"
                 android:layout_centerHorizontal="true" />
 
@@ -325,659 +239,609 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_bout"
-                android:layout_marginTop="20dp"
-                android:id="@+id/textView_rn2d"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/textView_rn2d" />
 
-            <TextView
-                android:text="(n+2 x d) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_rn2d"
-                android:layout_marginTop="20dp"
-                android:id="@+id/textView_n2d"
-                android:layout_marginStart="10dp"/>
 
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:id="@+id/editText_n2d"
-                android:layout_alignBaseline="@+id/textView_n2d"
-                android:layout_alignBottom="@+id/textView_n2d"
-                android:layout_toEndOf="@+id/textView_n2d"
-                android:inputType="number"/>
-
-            <TextView
-                android:text="D = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/editText_n2d"
-                android:layout_alignBottom="@+id/editText_n2d"
-                android:layout_toEndOf="@+id/editText_n2d"
-                android:id="@+id/textView_d"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:id="@+id/editText_d"
-                android:layout_alignBaseline="@+id/textView_d"
-                android:layout_alignBottom="@+id/textView_d"
-                android:layout_toEndOf="@+id/textView_d"
-                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
+                android:id="@+id/radioGroup_n2d"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textView_n2d"
-                android:id="@+id/radioGroup_bout">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bbout" />
+                android:layout_below="@+id/textView_rn2d">
 
-                <RadioButton
-                    android:text="Mauvais"
+
+                <TextView
+                    android:text="(n+2 x d) = "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mbout"
-                    android:layout_marginStart="30dp"/>
+                    android:layout_below="@+id/textView_rn2d"
+                    android:id="@+id/textView_n2d" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_n2d"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:text="D = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/textView_d"
+                    android:layout_marginStart="10dp"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_d"
+                    android:inputType="number"/>
+
             </RadioGroup>
+
+
+            <CheckBox
+                android:text="Règle des (n+2xd) vérifée"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_n2d"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_n2d"/>
+
+
 
             <TextView
                 android:text="Hauteur de piquage : "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_bout"
-                android:layout_marginTop="10dp"
-                android:id="@+id/textView_hautp"
-                android:layout_marginStart="10dp"/>
-            <TextView
-                android:text="3d = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_hautp"
-                android:layout_marginTop="20dp"
-                android:id="@+id/textView_3d"
-                android:layout_marginStart="10dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/checkBox_n2d"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView_hautp" />
 
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:id="@+id/editText_3d"
-                android:layout_alignBaseline="@+id/textView_3d"
-                android:layout_alignBottom="@+id/textView_3d"
-                android:layout_toEndOf="@+id/textView_3d"
-                android:inputType="number"/>
 
-            <TextView
-                android:text="hauteur piquage = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/editText_3d"
-                android:layout_alignBottom="@+id/editText_3d"
-                android:layout_toEndOf="@+id/editText_3d"
-                android:id="@+id/textView_hp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="22dp"
-                android:id="@+id/editText_hp"
-                android:layout_alignBaseline="@+id/textView_hp"
-                android:layout_alignBottom="@+id/textView_hp"
-                android:layout_toEndOf="@+id/textView_hp"
-                android:inputType="number"/>
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_3d"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textView_3d"
-                android:layout_marginTop="10dp"
-                android:id="@+id/radioGroup_hdp">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bhdp" />
+                android:layout_below="@+id/textView_hautp">
 
-                <RadioButton
-                    android:text="Mauvais"
+
+                <TextView
+                    android:text="3d = "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mhdp"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_3d"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_3d"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:text="hauteur piquage = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/textView_hp" />
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_hp"
+                    android:inputType="number"/>
             </RadioGroup>
 
+
+            <CheckBox
+                android:text="Hauteur de piquage vérifée"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_3d"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_3d"/>
+
+
             <TextView
-                android:text="Vase d'expansion"
+                android:text="- Vase d'expansion -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_hdp"
+                android:layout_below="@+id/checkBox_3d"
                 android:id="@+id/textView_vased"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"/>
+                android:layout_marginTop="30dp"/>
 
-            <TextView
-                android:text="Volume théorique vase d'expansion : V(L) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_vased"
-                android:id="@+id/textView_voltv"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
 
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_voltv"
-                android:layout_alignBaseline="@+id/textView_voltv"
-                android:layout_alignBottom="@+id/textView_voltv"
-                android:layout_toEndOf="@+id/textView_voltv"
-                android:inputType="number"/>
-            <TextView
-                android:text="Volume réel vase d'expansion : V(L) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_voltv"
-                android:id="@+id/textView_volrv"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_volrv"
-                android:layout_alignBaseline="@+id/textView_volrv"
-                android:layout_alignBottom="@+id/textView_volrv"
-                android:layout_toEndOf="@+id/textView_volrv"
-                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_vased"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textView_volrv"
-                android:layout_marginTop="10dp"
-                android:id="@+id/radioGroup_vase">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bvase" />
+                android:layout_below="@+id/textView_vased">
 
-                <RadioButton
-                    android:text="Mauvais"
+                <TextView
+                    android:text="Volume théorique vase d'expansion : V(L) = "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mvase"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_voltv"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_voltv"
+                    android:inputType="number"/>
+
             </RadioGroup>
 
-            <TextView
-                android:text="Pression de gonflage théorique : P(bar) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_vase"
-                android:id="@+id/textView_prest"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
 
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_prest"
-                android:layout_alignBaseline="@+id/textView_prest"
-                android:layout_alignBottom="@+id/textView_prest"
-                android:layout_toEndOf="@+id/textView_prest"
-                android:inputType="number"/>
-            <TextView
-                android:text="Pression de gonflage réele : P(bar) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_prest"
-                android:id="@+id/textView_presr"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_presr"
-                android:layout_alignBaseline="@+id/textView_presr"
-                android:layout_alignBottom="@+id/textView_presr"
-                android:layout_toEndOf="@+id/textView_presr"
-                android:inputType="number"/>
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_volrv"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/textView_presr"
-                android:id="@+id/radioGroup_pvase">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bpvase" />
+                android:layout_below="@+id/radioGroup_vased">
 
-                <RadioButton
-                    android:text="Mauvais"
+                <TextView
+                    android:text="Volume réel vase d'expansion : V(L) = "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mpvase"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_volrv"/>
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_volrv"
+                    android:inputType="number"/>
             </RadioGroup>
 
-            <TextView
-                android:text="Eau Chaude Sanitaire"
+            <CheckBox
+                android:text="Volume d'expension bien dimensionné"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_volrv"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_volrv"/>
+
+
+
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_pvase"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_prest"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/checkBox_volrv">
+
+                <TextView
+                    android:text="Pression de gonflage théorique : P(bar) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_prest" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_prest"
+                    android:inputType="number"/>
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_presr"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup_prest">
+
+                <TextView
+                    android:text="Pression de gonflage réele : P(bar) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_presr" />
+
+                <EditText
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_presr"
+                    android:inputType="number"/>
+            </RadioGroup>
+
+            <CheckBox
+                android:text="Pression de gonflage du vase correctement dimensionnée"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_presr"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_presr"/>
+
+
+
+            <TextView
+                android:text="- Eau Chaude Sanitaire -"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox_presr"
                 android:id="@+id/textView_ECS"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"/>
+
+
             <TextView
                 android:text="Le volume et la puissance sont-ils cohérents avec le nombre de logements (Voir abaques) "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_ECS"
+                android:layout_centerHorizontal="true"
                 android:id="@+id/textView_nblog"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
-                android:textAlignment="textStart" />
-            <TextView
-                android:text="Volume théorique : V(L) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_nblog"
-                android:id="@+id/textView_vth"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:id="@+id/editText_vth"
-                android:layout_alignBaseline="@+id/textView_vth"
-                android:layout_alignBottom="@+id/textView_vth"
-                android:layout_toEndOf="@+id/textView_vth"
-                android:inputType="number"/>
-            <TextView
-                android:text="Volume réel : V(L) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_vth"
-                android:id="@+id/textView_vr"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_vr"
-                android:layout_alignBaseline="@+id/textView_vr"
-                android:layout_alignBottom="@+id/textView_vr"
-                android:layout_toEndOf="@+id/textView_vr"
-                android:inputType="number"/>
+                android:layout_marginTop="15dp" />
 
-            <TextView
-                android:text="Pression théorique : P(bar) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/editText_vth"
-                android:layout_alignBottom="@+id/editText_vth"
-                android:layout_toEndOf="@+id/editText_vth"
-                android:id="@+id/textView_pth"/>
 
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:id="@+id/editText_pth"
-                android:layout_alignBaseline="@+id/textView_pth"
-                android:layout_alignBottom="@+id/textView_pth"
-                android:layout_toEndOf="@+id/textView_pth"
-                android:inputType="number"/>
-            <TextView
-                android:text="Pression réele : P(bar) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/editText_vr"
-                android:layout_alignBottom="@+id/editText_vr"
-                android:layout_toEndOf="@+id/editText_vr"
-                android:id="@+id/textView_pr"/>
-
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:id="@+id/editText_pr"
-                android:layout_alignBaseline="@+id/textView_pr"
-                android:layout_alignBottom="@+id/textView_pr"
-                android:layout_toEndOf="@+id/textView_pr"
-                android:inputType="number" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_vth"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/textView_vr"
-                android:id="@+id/radioGroup_ecs">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_becs" />
+                android:layout_below="@+id/textView_nblog">
 
-                <RadioButton
-                    android:text="Mauvais"
+
+                <TextView
+                    android:text="Volume théorique : V(L) = "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mecs"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_vth" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_vth"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:text="Pression théorique : P(bar) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup_vth"
+                    android:id="@+id/textView_pth"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_pth"
+                    android:inputType="number"/>
+
             </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_vr"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup_vth">
+
+                <TextView
+                    android:text="Volume réel : V(L) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_vr" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_vr"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:text="Pression réele : P(bar) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_pr"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_pr"
+                    android:inputType="number" />
+            </RadioGroup>
+
+            <CheckBox
+                android:text="Vase d'expension bien adapté au nombre de logements"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_vr"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_ecs"/>
+
+
 
             <TextView
                 android:text="Le débit de puissance est-il adapté ? (Voir Tableau) "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ecs"
-                android:id="@+id/textView_debp"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/checkBox_ecs"
+                android:id="@+id/textView_debp" />
 
-            <TextView
-                android:text="Débit théorique : D(m3/s) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_debp"
-                android:id="@+id/textView_dth"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:id="@+id/editText_dth"
-                android:layout_alignBaseline="@+id/textView_dth"
-                android:layout_alignBottom="@+id/textView_dth"
-                android:layout_toEndOf="@+id/textView_dth"
-                android:inputType="number"/>
-            <TextView
-                android:text="Débit réel : D(m3/s) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_dth"
-                android:id="@+id/textView_dr"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_dr"
-                android:layout_alignBaseline="@+id/textView_dr"
-                android:layout_alignBottom="@+id/textView_dr"
-                android:layout_toEndOf="@+id/textView_dr"
-                android:inputType="number"/>
+
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_dth"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/textView_dr"
-                android:id="@+id/radioGroup_deb">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bdeb" />
+                android:layout_below="@+id/textView_debp">
 
-                <RadioButton
-                    android:text="Mauvais"
+                <TextView
+                    android:text="Débit théorique : D(m3/s) = "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mdeb"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_dth"/>
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_dth"
+                    android:inputType="number"/>
+
             </RadioGroup>
 
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_dr"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup_dth">
+
+                <TextView
+                    android:text="Débit réel : D(m3/s) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_dr" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_dr"
+                    android:inputType="number"/>
+            </RadioGroup>
+
+
+            <CheckBox
+                android:text="Débit de puissance adapté"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_dr"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_deb"/>
+
+
+
             <TextView
-                android:text="Sondes"
+                android:text="- Sondes -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/radioGroup_deb"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/checkBox_deb"
                 android:id="@+id/textView_son" />
 
             <TextView
                 android:text="Vérifier que la ou les sondes sont idéalement placées "
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:layout_below="@+id/textView_son"
-                android:id="@+id/textView_vson"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:id="@+id/textView_vson" />
+
+            <CheckBox
+                android:text="Les sondes sont idéalements placées"
+                android:layout_width="wrap_content"
                 android:layout_below="@+id/textView_vson"
-                android:id="@+id/radioGroup_son">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bson" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mson"
-                    android:layout_marginStart="30dp"/>
-            </RadioGroup>
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_son"/>
 
             <TextView
-                android:text="Ventilation"
+                android:text="- Ventilation -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/radioGroup_son"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/checkBox_son"
                 android:id="@+id/textView_ven" />
+
             <TextView
-                android:text="Ventilation basse : "
+                android:text="Ventilation basse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_ven"
-                android:id="@+id/textView_venb"
-                android:layout_marginStart="10dp"/>
-            <TextView
-                android:text="Section théorique : S(m²) ≥ "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_venb"
-                android:id="@+id/textView_sectb"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:id="@+id/editText_sectb"
-                android:layout_alignBaseline="@+id/textView_sectb"
-                android:layout_alignBottom="@+id/textView_sectb"
-                android:layout_toEndOf="@+id/textView_sectb"
-                android:inputType="number"/>
-            <TextView
-                android:text="Section réele : S(m²) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_sectb"
-                android:id="@+id/textView_secrb"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_secrb"
-                android:layout_alignBaseline="@+id/textView_secrb"
-                android:layout_alignBottom="@+id/textView_secrb"
-                android:layout_toEndOf="@+id/textView_secrb"
-                android:inputType="number"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/textView_venb"/>
 
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_sectb"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/textView_secrb"
-                android:id="@+id/radioGroup_vb">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bvb" />
+                android:layout_below="@+id/textView_venb">
 
-                <RadioButton
-                    android:text="Mauvais"
+                <TextView
+                    android:text="Section théorique : S(m²) ≥ "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mvb"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_sectb"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_sectb"
+                    android:inputType="number"/>
+
             </RadioGroup>
 
-            <TextView
-                android:text="Ventilation haute : "
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_vb"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_secrb"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup_sectb">
+
+                <TextView
+                    android:text="Section réele : S(m²) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_sectb"
+                    android:id="@+id/textView_secrb"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_secrb"
+                    android:inputType="number"/>
+
+            </RadioGroup>
+
+
+            <CheckBox
+                android:text="Ventilation basse correctement dimensionnée"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_secrb"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_vb"/>
+
+
+            <TextView
+                android:text="Ventilation haute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox_vb"
                 android:id="@+id/textView_venh"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"/>
-            <TextView
-                android:text="Section théorique : S(m²) ≥ "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_venh"
-                android:id="@+id/textView_secth"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:id="@+id/editText_secth"
-                android:layout_alignBaseline="@+id/textView_secth"
-                android:layout_alignBottom="@+id/textView_secth"
-                android:layout_toEndOf="@+id/textView_secth"
-                android:inputType="number"/>
-            <TextView
-                android:text="Section réele : S(m²) = "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_secth"
-                android:id="@+id/textView_secrh"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"/>
-            <EditText
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:id="@+id/editText_sr"
-                android:layout_alignBaseline="@+id/textView_secrh"
-                android:layout_alignBottom="@+id/textView_secrh"
-                android:layout_toEndOf="@+id/textView_secrh"
-                android:inputType="number"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"/>
 
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:id="@+id/radioGroup_secth"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/textView_secrh"
-                android:id="@+id/radioGroup_vh">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bvh" />
+                android:layout_below="@+id/textView_venh">
 
-                <RadioButton
-                    android:text="Mauvais"
+                <TextView
+                    android:text="Section théorique : S(m²) ≥ "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mvh"
-                    android:layout_marginStart="30dp"/>
+                    android:id="@+id/textView_secth"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_secth"
+                    android:inputType="number"/>
             </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_secrh"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/radioGroup_secth">
+
+                <TextView
+                    android:text="Section réele : S(m²) = "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_secrh"/>
+
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/editText_sr"
+                    android:inputType="number"/>
+
+            </RadioGroup>
+
+
+            <CheckBox
+                android:text="Ventilation haute correctement dimensionnée"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/radioGroup_secrh"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_vh"/>
+
+
             <TextView
-                android:text="Calorifugeage"
+                android:text="- Calorifugeage -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:layout_below="@+id/radioGroup_vh"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/checkBox_vh"
                 android:id="@+id/textView_calo"/>
+
             <TextView
                 android:text="Vérifier la bonne isolation de tous les organes et conduites"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_calo"
-                android:layout_marginTop="19dp"
+                android:layout_marginTop="15dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/textView_iso"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/textView_iso"
-                android:id="@+id/radioGroup_calo">
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bcalo" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mcalo"
-                    android:layout_marginStart="30dp"/>
-            </RadioGroup>
+            <CheckBox
+                android:text="Les conduites sont correctement calorifugées"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/textView_iso"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_calo"/>
+
+
 
             <TextView
-                android:text="Observations générales"
+                android:text="- Observations générales -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:layout_below= "@+id/radioGroup_calo"
+                android:layout_below= "@+id/checkBox_calo"
                 android:id="@+id/textView_obsdim"/>
+
             <EditText
                 android:layout_width="500dp"
                 android:layout_height="match_parent"
@@ -988,6 +852,7 @@
             <ImageButton
                 android:layout_width="150dp"
                 android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
                 android:id="@+id/button_valdim"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/editText_obsdim"

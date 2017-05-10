@@ -24,21 +24,21 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         android:layout_alignParentEnd="true" />
-  <!--  <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_retourfindia"
-        android:text="Menu"
-        android:background="@android:color/holo_green_light"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:elevation="0dp"
-        android:textColor="@android:color/background_light"
-        android:layout_marginRight="20dp"
-        android:layout_alignBottom="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="25dp" /> -->
+    <!--  <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/button_retourfindia"
+          android:text="Menu"
+          android:background="@android:color/holo_green_light"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:elevation="0dp"
+          android:textColor="@android:color/background_light"
+          android:layout_marginRight="20dp"
+          android:layout_alignBottom="@+id/toolbar"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="25dp" /> -->
 
 
     <ImageView
@@ -59,192 +59,147 @@
         android:layout_alignTop="@+id/button_retourdebdec"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp" />
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/toolbar">
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:id="@+id/button_precfindia"
-        android:layout_alignParentStart="true"
-        android:background="@drawable/buttonprecedent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_precfindia"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/buttonprecedent" />
 
 
-    <TextView
-        android:text="Contrôle apparent de l'état du vase d'expansion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_ctrvas"
-        android:layout_below="@+id/button_precfindia"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView_ctrvas"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/radioGroup_ctrvas">
-
-
-        <RadioButton
-            android:text="Bon"
+        <TextView
+            android:text="Contrôle apparent de l'état du vase d'expansion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView_ctrgch1"
-            android:id="@+id/radioButton_bctrvas" />
+            android:id="@+id/textView_ctrvas"
+            android:layout_below="@+id/button_precfindia"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
 
-        <RadioButton
-            android:text="Mauvais"
+        <CheckBox
+            android:text="État du vase d'expension correct"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/textView_ctrvas"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_ctrvas"/>
+
+
+        <TextView
+            android:text="Cohérence des températures ECS (Départ/Retour)"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton_mctrvas"
-            android:layout_marginLeft="50dp"
-            />
+            android:layout_below="@+id/checkBox_ctrvas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textView_ctrecs" />
 
-    </RadioGroup>
-    <TextView
-        android:text="Cohérence des températures ECS (Départ/Retour)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGroup_ctrvas"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:id="@+id/textView_ctrecs" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_ctrecs"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/radioGroup_tempdecs">
-    <TextView
-        android:text="T° départ ="
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_tempdecs" />
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editText_tempdecs"
-        android:layout_width="140dp"
-        android:textSize="14sp" />
-</RadioGroup>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGroup_tempdecs"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/radioGroup_temprecs">
-    <TextView
-        android:text="T°retour ="
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_temprecs" />
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editText_temprecs"
-        android:layout_width="140dp"
-        android:textSize="14sp" />
-    </RadioGroup>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/radioGroup_temprecs"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/radioGroup_trecs">
-
-
-        <RadioButton
-            android:text="Bon"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView_ctrgch1"
-            android:id="@+id/radioButton_btrecs" />
+            android:layout_below="@+id/textView_ctrecs"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/radioGroup_tempdecs">
+            <TextView
+                android:text="T° départ ="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_tempdecs" />
 
-        <RadioButton
-            android:text="Mauvais"
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_tempdecs"
+                android:layout_width="140dp"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton_mtrecs"
-            android:layout_marginLeft="50dp"
-            />
+            android:layout_below="@+id/radioGroup_tempdecs"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/radioGroup_temprecs">
+            <TextView
+                android:text="T°retour ="
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_temprecs" />
 
-    </RadioGroup>
-    <TextView
-        android:text="Contrôle du bon fonctionnement du tableau électrique"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_ctrtab"
-        android:layout_below="@+id/radioGroup_trecs"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
-
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/textView_ctrtab"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:id="@+id/radioGroup_ctrtab">
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/editText_temprecs"
+                android:layout_width="140dp"
+                android:textSize="14sp" />
+        </RadioGroup>
 
 
-        <RadioButton
-            android:text="Bon"
+        <CheckBox
+            android:text="Températures ECS cohérentes"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/radioGroup_temprecs"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_temprecs"/>
+
+
+        <TextView
+            android:text="Contrôle du bon fonctionnement du tableau électrique"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView_ctrgch1"
-            android:id="@+id/radioButton_bctrtab" />
+            android:id="@+id/textView_ctrtab"
+            android:layout_below="@+id/checkBox_temprecs"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
 
-        <RadioButton
-            android:text="Mauvais"
+        <CheckBox
+            android:text="Fonctionnement correct du tableau électrique"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/textView_ctrtab"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_ctrtab"/>
+
+
+
+        <TextView
+            android:text="Observations générales"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton_mctrtab"
-            android:layout_marginLeft="50dp"
-            />
+            android:id="@+id/textView_obsdia"
+            android:layout_below="@+id/checkBox_ctrtab"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true" />
+        <EditText
+            android:layout_height="100dp"
+            android:id="@+id/editText_obsdia"
+            android:layout_below="@+id/textView_obsdia"
+            android:layout_centerHorizontal="true"
+            android:layout_width="600dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14sp" />
 
-    </RadioGroup>
-    <TextView
-        android:text="Observations générales"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_obsdia"
-        android:layout_below="@+id/radioGroup_ctrtab"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true" />
-    <EditText
-        android:layout_height="100dp"
-        android:id="@+id/editText_obsdia"
-        android:layout_below="@+id/textView_obsdia"
-        android:layout_centerHorizontal="true"
-        android:layout_width="600dp"
-        android:layout_marginTop="20dp"
-        android:textSize="14sp" />
-
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:id="@+id/button_valdia"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/editText_obsdia"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_valider" />
-</RelativeLayout>
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/button_valdia"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/editText_obsdia"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_valider" />
+    </RelativeLayout>
 </RelativeLayout>
