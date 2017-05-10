@@ -490,47 +490,23 @@
                 android:layout_marginTop="40dp"
                 android:id="@+id/editText_hmtci4" />
 
-            <TextView
-                android:text="Filtre à boue"
+
+            <CheckBox
+                android:text="Présence d'un filtre à boue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText_hmtci4"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/textView_boue"/>
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_boue"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp"
-                android:id="@+id/radioGroup_boue">
+                android:id="@+id/checkBox_boue"/>
 
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/radioGroup_vitci4"
-                    android:id="@+id/radioButton_ouib"
-                    android:layout_marginLeft="20dp"/>
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_nonb"
-                    android:layout_marginLeft="50dp"
-                    />
-            </RadioGroup>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_marginTop="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/checkbox_red"
-                android:layout_below="@+id/radioGroup_boue"
+                android:layout_below="@+id/checkBox_boue"
                 android:layout_centerHorizontal="true"
                 android:text="Présence d'un réduit" />
             <TextView
@@ -637,37 +613,16 @@
                 android:layout_toEndOf="@+id/textView_DTr"
                 android:id="@+id/editText_DTr" />
 
-            <TextView
-                android:text="Accesibilité pieds de colonne"
+
+            <CheckBox
+                android:text="Pieds de colonne accessibles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:layout_below="@+id/editText_DTr"
                 android:layout_marginTop="20dp"
-                android:id="@+id/textView_pdc" />
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/textView_pdc"
-                android:id="@+id/radioGroup_pdc">
+                android:id="@+id/checkBox_pdc"/>
 
-
-                <RadioButton
-                    android:text="Oui"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_apco" />
-
-                <RadioButton
-                    android:text="Non"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_apcn" />
-            </RadioGroup>
 
 
             <TextView
@@ -676,7 +631,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_pdc"
+                android:layout_below="@+id/checkBox_pdc"
                 android:id="@+id/textView_obs" />
 
             <EditText
