@@ -167,31 +167,16 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch1"/>
 
-            <RadioGroup
+            <CheckBox
+                android:text="Rendement de combustion correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_rendch1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_rendch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_rendch1">
+                android:id="@+id/checkBox_rendch1"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_brendch1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mrendch1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
             <TextView
@@ -201,8 +186,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch1"
-                android:layout_below="@+id/radioGroup_rendch1"
+                android:layout_below="@+id/checkBox_rendch1"
                 android:id="@+id/textView_ctrgch1" />
+
+
             <EditText
                 android:layout_centerHorizontal="true"
                 android:layout_width="100dp"
@@ -212,68 +199,37 @@
                 android:layout_below="@+id/textView_ctrgch1"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Pression de gaz correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_pgazch1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_pgazch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_pgazch1">
+                android:id="@+id/checkBox_pgazch1"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bpgazch1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mpgazch1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrflch1"
-                android:layout_below="@+id/radioGroup_pgazch1"
+                android:layout_below="@+id/checkBox_pgazch1"
                 android:layout_centerHorizontal="true" />
 
 
-
-            <RadioGroup
+            <CheckBox
+                android:text="État de la flamme correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrflch1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrflch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch1"
-                android:layout_marginTop="10dp">
+                android:id="@+id/checkBox_ctrflch1"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bctrflch1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrflch1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
 
@@ -283,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrabsch1"
-                android:layout_below="@+id/radioGroup_ctrflch1"
+                android:layout_below="@+id/checkBox_ctrflch1"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -313,71 +269,41 @@
             </RadioGroup>
 
             <TextView
-                android:text="Contrôle du registre d'air/ du ventilateur"
+                android:text="Contrôle du registre d'air et/ou du ventilateur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrventch1"
                 android:layout_below="@+id/radioGroup_ctrabsch1"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="État du registre d'air et/ou du ventilateur correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrventch1"                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrventch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrventch1">
+                android:id="@+id/checkBox_ctrventch1"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bctrventch1" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrventch1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle des temps de cycle de l'installation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrcych1"
-                android:layout_below="@+id/radioGroup_ctrventch1"
+                android:layout_below="@+id/checkBox_ctrventch1"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Temps de cycle de l'installation corrects"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrcych1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrcych1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrcych1">
-
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bctrcych1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrcych1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
+                android:id="@+id/checkBox_ctrcych1"/>
 
 
             <TextView
@@ -386,34 +312,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrredch1"
-                android:layout_below="@+id/radioGroup_ctrcych1"
+                android:layout_below="@+id/checkBox_ctrcych1"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Réduit correctement appliqué"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrredch1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrredch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrredch1">
+                android:id="@+id/checkBox_ctrredch1"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bctrredch1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrredch1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
             <TextView
                 android:text="Contrôle de l'écoulement des condensats"
@@ -421,40 +332,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrecoch1"
-                android:layout_below="@+id/radioGroup_ctrredch1"
+                android:layout_below="@+id/checkBox_ctrredch1"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Écoulement des condensats correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrecoch1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_ctrecoch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrecoch1">
+                android:id="@+id/checkBox_ctrecoch1"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bctrecoch1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrecoch1"
-                    android:layout_marginLeft="50dp"
-                    />
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de la température de fumée (T°)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrtfumch1"
-                android:layout_below="@+id/radioGroup_ctrecoch1"
+                android:layout_below="@+id/checkBox_ctrecoch1"
                 android:layout_centerHorizontal="true" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -465,40 +362,26 @@
                 android:id="@+id/editText_ctrtfumch1"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch1"/>
-            <RadioGroup
+
+            <CheckBox
+                android:text="Température des fumées correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch1"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_ctrtfumch1"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrtfumch1">
+                android:id="@+id/checkBox_ctrtfumch1"/>
 
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch1"
-                    android:id="@+id/radioButton_bctrtfumch1" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrtfumch1"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
             <TextView
                 android:text="Chaudière 2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtfumch1"
+                android:layout_below="@+id/checkBox_ctrtfumch1"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:id="@+id/textView_ch2dia" />
+
 
             <TextView
                 android:text="Rendement de combustion (%) "
@@ -518,31 +401,16 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch2"/>
 
-            <RadioGroup
+            <CheckBox
+                android:text="Rendement de combustion correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_rendch2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_rendch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_rendch2">
+                android:id="@+id/checkBox_rendch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_brendch2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mrendch2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
             <TextView
@@ -552,8 +420,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch2"
-                android:layout_below="@+id/radioGroup_rendch2"
+                android:layout_below="@+id/checkBox_rendch2"
                 android:id="@+id/textView_ctrgch2" />
+
+
             <EditText
                 android:layout_centerHorizontal="true"
                 android:layout_width="100dp"
@@ -563,68 +433,37 @@
                 android:layout_below="@+id/textView_ctrgch2"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Pression de gaz correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_pgazch2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_pgazch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_pgazch2">
+                android:id="@+id/checkBox_pgazch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bpgazch2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mpgazch2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrflch2"
-                android:layout_below="@+id/radioGroup_pgazch2"
+                android:layout_below="@+id/checkBox_pgazch2"
                 android:layout_centerHorizontal="true" />
 
 
-
-            <RadioGroup
+            <CheckBox
+                android:text="État de la flamme correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrflch2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrflch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch2"
-                android:layout_marginTop="10dp">
+                android:id="@+id/checkBox_ctrflch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bctrflch2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrflch2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
 
@@ -634,7 +473,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrabsch2"
-                android:layout_below="@+id/radioGroup_ctrflch2"
+                android:layout_below="@+id/checkBox_ctrflch2"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -664,71 +503,41 @@
             </RadioGroup>
 
             <TextView
-                android:text="Contrôle du registre d'air/ du ventilateur"
+                android:text="Contrôle du registre d'air et/ou du ventilateur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrventch2"
                 android:layout_below="@+id/radioGroup_ctrabsch2"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="État du registre d'air et/ou du ventilateur correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrventch2"                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrventch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrventch2">
+                android:id="@+id/checkBox_ctrventch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bctrventch2" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrventch2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle des temps de cycle de l'installation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrcych2"
-                android:layout_below="@+id/radioGroup_ctrventch2"
+                android:layout_below="@+id/checkBox_ctrventch2"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Temps de cycle de l'installation corrects"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrcych2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrcych2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrcych2">
-
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bctrcych2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrcych2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
+                android:id="@+id/checkBox_ctrcych2"/>
 
 
             <TextView
@@ -737,34 +546,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrredch2"
-                android:layout_below="@+id/radioGroup_ctrcych2"
+                android:layout_below="@+id/checkBox_ctrcych2"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Réduit correctement appliqué"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrredch2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrredch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrredch2">
+                android:id="@+id/checkBox_ctrredch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bctrredch2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrredch2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
             <TextView
                 android:text="Contrôle de l'écoulement des condensats"
@@ -772,40 +566,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrecoch2"
-                android:layout_below="@+id/radioGroup_ctrredch2"
+                android:layout_below="@+id/checkBox_ctrredch2"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Écoulement des condensats correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrecoch2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_ctrecoch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrecoch2">
+                android:id="@+id/checkBox_ctrecoch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bctrecoch2" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrecoch2"
-                    android:layout_marginLeft="50dp"
-                    />
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de la température de fumée (T°)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrtfumch2"
-                android:layout_below="@+id/radioGroup_ctrecoch2"
+                android:layout_below="@+id/checkBox_ctrecoch2"
                 android:layout_centerHorizontal="true" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -816,39 +596,27 @@
                 android:id="@+id/editText_ctrtfumch2"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch2"/>
-            <RadioGroup
+
+            <CheckBox
+                android:text="Température des fumées correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch2"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_ctrtfumch2"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrtfumch2">
+                android:id="@+id/checkBox_ctrtfumch2"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch2"
-                    android:id="@+id/radioButton_bctrtfumch2" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrtfumch2"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Chaudière 3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtfumch2"
+                android:layout_below="@+id/checkBox_ctrtfumch2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:id="@+id/textView_ch3dia" />
+
 
             <TextView
                 android:text="Rendement de combustion (%) "
@@ -868,31 +636,16 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch3"/>
 
-            <RadioGroup
+            <CheckBox
+                android:text="Rendement de combustion correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_rendch3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_rendch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_rendch3">
+                android:id="@+id/checkBox_rendch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_brendch3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mrendch3"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
             <TextView
@@ -902,8 +655,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch3"
-                android:layout_below="@+id/radioGroup_rendch3"
+                android:layout_below="@+id/checkBox_rendch3"
                 android:id="@+id/textView_ctrgch3" />
+
+
             <EditText
                 android:layout_centerHorizontal="true"
                 android:layout_width="100dp"
@@ -913,68 +668,37 @@
                 android:layout_below="@+id/textView_ctrgch3"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Pression de gaz correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_pgazch3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_pgazch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_pgazch3">
+                android:id="@+id/checkBox_pgazch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bpgazch3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mpgazch3"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrflch3"
-                android:layout_below="@+id/radioGroup_pgazch3"
+                android:layout_below="@+id/checkBox_pgazch3"
                 android:layout_centerHorizontal="true" />
 
 
-
-            <RadioGroup
+            <CheckBox
+                android:text="État de la flamme correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrflch3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrflch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch3"
-                android:layout_marginTop="10dp">
+                android:id="@+id/checkBox_ctrflch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bctrflch3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrflch3"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
 
@@ -984,7 +708,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrabsch3"
-                android:layout_below="@+id/radioGroup_ctrflch3"
+                android:layout_below="@+id/checkBox_ctrflch3"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -1014,71 +738,41 @@
             </RadioGroup>
 
             <TextView
-                android:text="Contrôle du registre d'air/ du ventilateur"
+                android:text="Contrôle du registre d'air et/ou du ventilateur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrventch3"
                 android:layout_below="@+id/radioGroup_ctrabsch3"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="État du registre d'air et/ou du ventilateur correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrventch3"                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrventch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrventch3">
+                android:id="@+id/checkBox_ctrventch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bctrventch3" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrventch3"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle des temps de cycle de l'installation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrcych3"
-                android:layout_below="@+id/radioGroup_ctrventch3"
+                android:layout_below="@+id/checkBox_ctrventch3"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Temps de cycle de l'installation corrects"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrcych3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrcych3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrcych3">
-
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bctrcych3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrcych3"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
+                android:id="@+id/checkBox_ctrcych3"/>
 
 
             <TextView
@@ -1087,34 +781,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrredch3"
-                android:layout_below="@+id/radioGroup_ctrcych3"
+                android:layout_below="@+id/checkBox_ctrcych3"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Réduit correctement appliqué"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrredch3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrredch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrredch3">
+                android:id="@+id/checkBox_ctrredch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bctrredch3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrredch3"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
             <TextView
                 android:text="Contrôle de l'écoulement des condensats"
@@ -1122,40 +801,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrecoch3"
-                android:layout_below="@+id/radioGroup_ctrredch3"
+                android:layout_below="@+id/checkBox_ctrredch3"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Écoulement des condensats correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrecoch3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_ctrecoch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrecoch3">
+                android:id="@+id/checkBox_ctrecoch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bctrecoch3" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrecoch3"
-                    android:layout_marginLeft="50dp"
-                    />
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de la température de fumée (T°)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrtfumch3"
-                android:layout_below="@+id/radioGroup_ctrecoch3"
+                android:layout_below="@+id/checkBox_ctrecoch3"
                 android:layout_centerHorizontal="true" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -1166,39 +831,29 @@
                 android:id="@+id/editText_ctrtfumch3"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch3"/>
-            <RadioGroup
+
+            <CheckBox
+                android:text="Température des fumées correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch3"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_ctrtfumch3"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrtfumch3">
+                android:id="@+id/checkBox_ctrtfumch3"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch3"
-                    android:id="@+id/radioButton_bctrtfumch3" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrtfumch3"
-                    android:layout_marginLeft="50dp"
-                    />
 
-            </RadioGroup>
+
             <TextView
                 android:text="Chaudière 4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup_ctrtfumch3"
+                android:layout_below="@+id/checkBox_ctrtfumch3"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:id="@+id/textView_ch4dia" />
+
 
             <TextView
                 android:text="Rendement de combustion (%) "
@@ -1218,31 +873,16 @@
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_rendch4"/>
 
-            <RadioGroup
+            <CheckBox
+                android:text="Rendement de combustion correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_rendch4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_rendch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_rendch4">
+                android:id="@+id/checkBox_rendch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_brendch4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mrendch4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
             <TextView
@@ -1252,8 +892,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_alignStart="@+id/textView_rendch4"
-                android:layout_below="@+id/radioGroup_rendch4"
+                android:layout_below="@+id/checkBox_rendch4"
                 android:id="@+id/textView_ctrgch4" />
+
+
             <EditText
                 android:layout_centerHorizontal="true"
                 android:layout_width="100dp"
@@ -1263,68 +905,37 @@
                 android:layout_below="@+id/textView_ctrgch4"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Pression de gaz correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_pgazch4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_pgazch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_pgazch4">
+                android:id="@+id/checkBox_pgazch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bpgazch4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mpgazch4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de l'état de la flamme "
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView_ctrflch4"
-                android:layout_below="@+id/radioGroup_pgazch4"
+                android:layout_below="@+id/checkBox_pgazch4"
                 android:layout_centerHorizontal="true" />
 
 
-
-            <RadioGroup
+            <CheckBox
+                android:text="État de la flamme correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrflch4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrflch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrflch4"
-                android:layout_marginTop="10dp">
+                android:id="@+id/checkBox_ctrflch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bctrflch4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrflch4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
 
@@ -1334,7 +945,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrabsch4"
-                android:layout_below="@+id/radioGroup_ctrflch4"
+                android:layout_below="@+id/checkBox_ctrflch4"
                 android:layout_centerHorizontal="true" />
             <RadioGroup
                 android:layout_width="wrap_content"
@@ -1364,71 +975,41 @@
             </RadioGroup>
 
             <TextView
-                android:text="Contrôle du registre d'air/ du ventilateur"
+                android:text="Contrôle du registre d'air et/ou du ventilateur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrventch4"
                 android:layout_below="@+id/radioGroup_ctrabsch4"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="État du registre d'air et/ou du ventilateur correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrventch4"                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrventch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrventch4">
+                android:id="@+id/checkBox_ctrventch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bctrventch4" />
 
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrventch4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
             <TextView
                 android:text="Contrôle des temps de cycle de l'installation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrcych4"
-                android:layout_below="@+id/radioGroup_ctrventch4"
+                android:layout_below="@+id/checkBox_ctrventch4"
                 android:layout_centerHorizontal="true" />
-            <RadioGroup
+
+            <CheckBox
+                android:text="Temps de cycle de l'installation corrects"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrcych4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrcych4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrcych4">
-
-
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bctrcych4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrcych4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
+                android:id="@+id/checkBox_ctrcych4"/>
 
 
             <TextView
@@ -1437,34 +1018,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrredch4"
-                android:layout_below="@+id/radioGroup_ctrcych4"
+                android:layout_below="@+id/checkBox_ctrcych4"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Réduit correctement appliqué"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrredch4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_ctrredch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrredch4">
+                android:id="@+id/checkBox_ctrredch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bctrredch4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrredch4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
             <TextView
                 android:text="Contrôle de l'écoulement des condensats"
@@ -1472,40 +1038,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrecoch4"
-                android:layout_below="@+id/radioGroup_ctrredch4"
+                android:layout_below="@+id/checkBox_ctrredch4"
                 android:layout_centerHorizontal="true" />
 
-            <RadioGroup
+            <CheckBox
+                android:text="Écoulement des condensats correct"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/textView_ctrecoch4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView_ctrecoch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrecoch4">
+                android:id="@+id/checkBox_ctrecoch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bctrecoch4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrecoch4"
-                    android:layout_marginLeft="50dp"
-                    />
-            </RadioGroup>
             <TextView
                 android:text="Contrôle de la température de fumée (T°)"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ctrtfumch4"
-                android:layout_below="@+id/radioGroup_ctrecoch4"
+                android:layout_below="@+id/checkBox_ctrecoch4"
                 android:layout_centerHorizontal="true" />
             <EditText
                 android:layout_centerHorizontal="true"
@@ -1516,31 +1068,18 @@
                 android:id="@+id/editText_ctrtfumch4"
                 android:textSize="14sp"
                 android:layout_below="@+id/textView_ctrtfumch4"/>
-            <RadioGroup
+
+            <CheckBox
+                android:text="Température des fumées correcte"
                 android:layout_width="wrap_content"
+                android:layout_below="@id/editText_ctrtfumch4"
+                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/editText_ctrtfumch4"
-                android:orientation="horizontal"
-                android:id="@+id/radioGroup_ctrtfumch4">
+                android:layout_marginBottom="30dp"
+                android:id="@+id/checkBox_ctrtfumch4"/>
 
 
-                <RadioButton
-                    android:text="Bon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView_ctrgch4"
-                    android:id="@+id/radioButton_bctrtfumch4" />
-
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mctrtfumch4"
-                    android:layout_marginLeft="50dp"
-                    />
-
-            </RadioGroup>
 
 
 
