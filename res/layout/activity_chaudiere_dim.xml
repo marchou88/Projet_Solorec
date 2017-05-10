@@ -101,11 +101,11 @@
                 android:background="@drawable/buttonsuivant" />
 
             <TextView
-                android:text="Choix de l'installation "
+                android:text="- Choix de l'installation -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:id="@+id/textView_chodim"
                 android:layout_below="@+id/button_suivchdim"/>
 
@@ -118,16 +118,13 @@
                 android:id="@+id/spinner_chodim" />
 
             <TextView
-                android:text="Chaudière 1"
+                android:text="- Chaudière 1 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_below="@+id/spinner_chodim"
                 android:layout_marginTop="20dp"
                 android:id="@+id/textView_ch1dim" />
-
-
-
 
 
             <RadioGroup
@@ -161,7 +158,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_below="@+id/radioGroup_puisct1"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/radioGroup_puiscr1">
@@ -184,48 +180,56 @@
 
 
 
+            <CheckBox
+                android:text="Dimensionnement correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_puiscr1"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/checkBox_ch1" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/radioGroup_puiscr1"
+                android:layout_below="@+id/checkBox_ch1"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_dimc1">
-
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_obsch1">
                 <TextView
-                    android:text="Dimensionnement : "
+                    android:text="Observations : "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView_dimc1" />
-
-
-
-                <RadioButton
-                    android:text="Bon"
+                    android:id="@+id/textView_obsch1" />
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bc1"
-                    android:checked="false" />
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mc1" />
+                    android:inputType="number"
+                    android:ems="8"
+                    android:id="@+id/editText_obsch1" />
             </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajouter une chaudière"
+                android:layout_alignTop="@+id/radioGroup_obsch1"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/button_ajch2" />
+
+            <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/radioGroup_obsch1"
+    android:id="@+id/layout_ch2"
+    android:layout_centerHorizontal="true">
 
 
             <TextView
-                android:text="Chaudière 2"
+                android:text="- Chaudière 2 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_dimc1"
                 android:layout_marginTop="20dp"
-                android:id="@+id/textView_ch2dim"/>
-
-
-
+                android:id="@+id/textView_ch2dim" />
 
 
             <RadioGroup
@@ -259,7 +263,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_below="@+id/radioGroup_puisct2"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/radioGroup_puiscr2">
@@ -282,55 +285,56 @@
 
 
 
+            <CheckBox
+                android:text="Dimensionnement correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_puiscr2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/checkBox_ch2" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/radioGroup_puiscr2"
+                android:layout_below="@+id/checkBox_ch2"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_dimc2">
-
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_obsch2">
                 <TextView
-                    android:text="Dimensionnement : "
+                    android:text="Observations : "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView_dimc2" />
-
-
-
-
-
-
-
-
-
-
-                <RadioButton
-                    android:text="Bon"
+                    android:id="@+id/textView_obsch2" />
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bc2"
-                    android:checked="false" />
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mc2" />
+                    android:inputType="number"
+                    android:ems="8"
+                    android:id="@+id/editText_obsch2" />
             </RadioGroup>
 
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajouter une chaudière"
+                android:id="@+id/button_ajch3"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_ch2"
+            android:id="@+id/layout_ch3"
+            android:layout_centerHorizontal="true">
             <TextView
-                android:text="Chaudière 3"
+                android:text="- Chaudière 3 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_dimc2"
                 android:layout_marginTop="20dp"
-                android:id="@+id/textView_ch3dim"/>
-
-
-
+                android:id="@+id/textView_ch3dim" />
 
 
             <RadioGroup
@@ -364,7 +368,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_below="@+id/radioGroup_puisct3"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/radioGroup_puiscr3">
@@ -387,48 +390,53 @@
 
 
 
+            <CheckBox
+                android:text="Dimensionnement correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_puiscr3"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/checkBox_ch3" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/radioGroup_puiscr3"
+                android:layout_below="@+id/checkBox_ch3"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_dimc3">
-
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_obsch3">
                 <TextView
-                    android:text="Dimensionnement : "
+                    android:text="Observations : "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView_dimc3" />
-
-
-
-                <RadioButton
-                    android:text="Bon"
+                    android:id="@+id/textView_obsch3" />
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bc3"
-                    android:checked="false" />
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mc3" />
+                    android:inputType="number"
+                    android:ems="8"
+                    android:id="@+id/editText_obsch3" />
             </RadioGroup>
-
-
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajouter une chaudière"
+                android:id="@+id/button_ajch4"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_ch3"
+            android:id="@+id/layout_ch4"
+            android:layout_centerHorizontal="true">
             <TextView
-                android:text="Chaudière 4"
+                android:text="- Chaudière 4 -"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@+id/radioGroup_dimc3"
                 android:layout_marginTop="20dp"
-                android:id="@+id/textView_ch4dim"/>
-
-
-
+                android:id="@+id/textView_ch4dim" />
 
 
             <RadioGroup
@@ -462,7 +470,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
                 android:layout_below="@+id/radioGroup_puisct4"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/radioGroup_puiscr4">
@@ -485,38 +492,33 @@
 
 
 
+            <CheckBox
+                android:text="Dimensionnement correct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_puiscr4"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/checkBox_ch4" />
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/radioGroup_puiscr4"
+                android:layout_below="@+id/checkBox_ch4"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup_dimc4">
-
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup_obsch4">
                 <TextView
-                    android:text="Dimensionnement : "
+                    android:text="Observations : "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView_dimc4" />
-
-
-
-                <RadioButton
-                    android:text="Bon"
+                    android:id="@+id/textView_obsch4" />
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_bc4"
-                    android:checked="false" />
-                <RadioButton
-                    android:text="Mauvais"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radioButton_mc4" />
+                    android:inputType="number"
+                    android:ems="8"
+                    android:id="@+id/editText_obsch4" />
             </RadioGroup>
-
-
-
+            </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
 

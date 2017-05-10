@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -19,14 +21,17 @@ public class activity_debut_dec extends AppCompatActivity {
     private ImageButton btnretourdebdec;
     private ImageButton btnsuivdebdec;
     private Spinner spinner3;
+    private CheckBox checkBoxalimgaz;
+    private RadioGroup rgpressgazd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_debut_dec);
+        rgpressgazd = (RadioGroup) findViewById(R.id.radiogroup_pressgazd);
+        rgpressgazd.setVisibility(RadioGroup.INVISIBLE);
 
-
-        spinner3 = (Spinner) findViewById(R.id.spinner_client);
+            spinner3 = (Spinner) findViewById(R.id.spinner_client);
         List TypeClient = new ArrayList();
         TypeClient.add("      ");
         TypeClient.add("Industrie");
@@ -61,6 +66,18 @@ public class activity_debut_dec extends AppCompatActivity {
 
     }
 
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which checkbox was clicked
+        switch (view.getId()) {
+            case R.id.checkbox_alimgaz:
+                if (checked){rgpressgazd.setVisibility(RadioGroup.VISIBLE);}
+                else {rgpressgazd.setVisibility(RadioGroup.INVISIBLE);}
+                break;
+        }
+    }
     private void BackToMenu() {
         Intent intentBackToMenu = new Intent();
         intentBackToMenu.setClass(this, activity_menu.class);

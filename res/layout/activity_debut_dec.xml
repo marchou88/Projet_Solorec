@@ -397,21 +397,24 @@
                 android:layout_alignBottom="@+id/editText_puisins"
                 android:layout_toEndOf="@+id/editText_puisins" />
 
-            <TextView
-                android:text="- Pression gaz -"
+            <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/editText_puisins"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="19dp"
-                android:id="@+id/textView_comch1" />
+                android:id="@+id/checkbox_alimgaz"
+                android:text="Alimentation en gaz"
+                android:onClick="onCheckboxClicked"
+                />
+
 
             <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13dp"
                 android:orientation="horizontal"
-                android:layout_below="@+id/textView_comch1"
+                android:layout_below="@+id/checkbox_alimgaz"
                 android:id="@+id/radiogroup_pressgazd"
                 android:layout_centerHorizontal="true">
 
